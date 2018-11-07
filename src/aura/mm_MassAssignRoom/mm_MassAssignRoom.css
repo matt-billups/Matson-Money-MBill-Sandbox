@@ -1,0 +1,55 @@
+.THIS .leftSide 
+{
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.THIS .rightSide 
+{
+    float: right;
+    width: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.THIS li
+{
+    border-bottom: solid 1px #DDDDDD;
+    padding: 8px;
+}
+
+.THIS .left
+{
+    float: left;
+    width: 30%;
+    
+}
+
+.THIS .right
+{
+    float: right;
+    width: 30%;
+}
+
+.THIS .center
+{
+    margin: auto;
+    width: 30%;
+}
+
+.THIS .slds-spinner_container
+{
+    z-index: 10000;
+    position: fixed;
+}
+
+.THIS .successCheck
+{
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+}

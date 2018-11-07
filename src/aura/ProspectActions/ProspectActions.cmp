@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+                access="global">   
+    
+    <aura:attribute name="recordId" type="Id" />
+    <div class="slds-box slds-theme_default">
+    <div class="slds-tabs_scoped">
+        <ul class="slds-tabs_scoped__nav" role="tablist">            
+            <li aura:id='ProspectKit' class="slds-tabs_scoped__item slds-is-active " title="Item One" role="presentation" onclick="{! c.onProspectKitTabPress}" ><a class="slds-tabs_scoped__link"  role="tab" tabindex="0" aria-selected="true" aria-controls="tab-scoped-1" id="tab-scoped-1__item">Prospect Kit</a></li>
+            <li  aura:id='SendFirstStepEmail' class="slds-tabs_scoped__item " title="Item Two" role="presentation" onclick="{! c.onSendFirstStepEmailTabPress}" ><a class="slds-tabs_scoped__link"  role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-scoped-2" id="tab-scoped-2__item">First Step Email</a></li>           
+        </ul>            
+        <div aura:id="tab-scoped-1" class="slds-tabs_scoped__content slds-show" role="tabpanel" aria-labelledby="tab-scoped-1__item">   <c:ProspectKit recordId="{!v.recordId}" /></div>        
+        <div aura:id="tab-scoped-2" class="slds-tabs_scoped__content slds-hide" role="tabpanel" aria-labelledby="tab-scoped-2__item"> <c:SendFirstStepEmail recordId="{!v.recordId}" /> </div>
+    </div>  
+    </div>
+</aura:component>

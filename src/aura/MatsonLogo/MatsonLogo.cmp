@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+   <div class="blue">   
+    <img class="logo" src="https://www.matsonmoney.com/imgs/MMlogo_v2_W.png"/>
+    </div>
+</aura:component>

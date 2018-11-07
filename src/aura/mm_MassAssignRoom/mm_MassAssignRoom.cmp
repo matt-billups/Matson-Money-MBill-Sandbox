@@ -1,0 +1,325 @@
+<aura:component controller="mm_MassAssignRoomController" 
+                implements="force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <style>
+        .modal-body
+        {
+        width:100% !important;
+        padding:0;
+        }
+        .slds-modal__content 
+        {
+        height: 100% !important;;
+        }
+        .slds-modal
+        {
+        top: 3rem !important;
+        }
+        .slds-modal__container
+        {
+        width:100% !important;
+        padding:0;
+        }           
+    </style>
+
+    <!-- Event Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:SearchKeyChange" action="{!c.searchKeyChange}"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    
+    <!-- Utility Bar Access -->
+    <lightning:utilityBarAPI aura:id="utilityBar"/>
+    
+    <!-- Variables -->
+    <aura:attribute name="searchEventName" type="List[]"/>
+    <aura:attribute name="eventRegistrations" type="List" access="GLOBAL"/>
+    <aura:attribute name="eventId" type="string"/>
+    <aura:attribute name="eventValueName" type="string"/>
+    <aura:attribute name="searchRoom" type="List[]"/>
+    <aura:attribute name="roomId" type="string"/>
+    <aura:attribute name="roomValueName" type="string"/>
+    <aura:attribute name="roomCapacity" type="Integer"/>
+    <aura:attribute name="roomRegCount" type="Integer"/>
+    <aura:attribute name="roomOpenSeats" type="Integer"/>
+    <aura:attribute name="myBool" type="boolean"/>
+    <aura:attribute name="spotsAssigned" type="Integer"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    
+    <!-- Loading Spinner: shows while waiting for server side actions -->
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--medium slds-is-relative" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <!-- First Page -->
+    <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal--large data-aura-rendered-by slds-show" aria-labelledby="header43" aura:id="stepOne">
+        <div class="slds-modal__container">
+            <!-- Header -->
+            <div class="slds-modal__header">
+                <h2 id="header43" class="slds-text-heading--medium">Mass Assign Room</h2>
+            </div>
+            <!-- Body -->
+            <div class="slds-modal__content slds-p-around--medium">
+                <!-- Event Selection -->
+                <div class="leftSide">
+                    <div class="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open" aura:id="searchEventName">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-01"><ui:outputText value="Event" /></label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right slds-picklist__input">
+                                <input type="search" id="eventNameText" disabled="" class="slds-lookup__search-input slds-input" onkeyup="{!c.searchingEventName}" onfocus="{!c.showEventSuggestions}" placeholder="Event Name" aria-owns="option-list-01" role="combobox" aria-activedescendant="" aria-expanded="true" aria-autocomplete="list" />
+                                <div id ="errorsEvent" class="slds-text-color--error"> </div>
+                            </div>
+                        </div>
+                        <div class= "slds-hide" aura:id="dropdownSelectionTo">
+                            <div class="slds-dropdown slds-dropdown--left slds-dropdown--length-5 slds-is-open" role="listbox">
+                                <ul id="eventNameList" class="slds-dropdown__list" role="group" aria-label="Recently Viewed">
+                                    <!--Iteration begins-->
+                                    <aura:iteration items="{!v.searchEventName}" var="Event__c">
+                                        <li class="slds-is-selected" role="presentation" data-record="{!Event__c.Id}" data-data="{!Event__c.Name}" onclick="{!c.selectedEventName}">
+                                            <span class="slds-lookup__item-action slds-lookup__item-action--label" role="option" tabindex="0" id="listbox-option-286">
+                                                <span aura:id="{!Event__c.Id}" class="slds-truncate">
+                                                    {!Event__c.Name}
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                <!-- Room Selection -->
+                <div class="rightSide">
+                    <div class="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open" aura:id="searchRoom">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-01"><ui:outputText value="Room to Assign" /></label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right slds-picklist__input">
+                                <input type="search" id="roomText" disabled="" class="slds-lookup__search-input slds-input" onkeyup="{!c.searchingRoom}" onfocus="{!c.showRoomSuggestions}" placeholder="Room" aria-owns="option-list-01" role="combobox" aria-activedescendant="" aria-expanded="true" aria-autocomplete="list" />
+                                <div id ="errorsRoom" class="slds-text-color--error"> </div>
+                            </div>
+                        </div>
+                        <div class= "slds-hide" aura:id="dropdownSelectionTo2">
+                            <div class="slds-dropdown slds-dropdown--left slds-dropdown--length-5 slds-is-open" role="listbox">
+                                <ul id="roomList" class="slds-dropdown__list" role="group" aria-label="Recently Viewed">
+                                    <!--Iteration begins-->
+                                    <aura:iteration items="{!v.searchRoom}" var="Venue_Room__c">
+                                        <li class="slds-is-selected" role="presentation" data-record="{!Venue_Room__c.Id}" data-data="{!Venue_Room__c.Room_Name__c}" data-capacity="{!Venue_Room__c.Capacity__c}" onclick="{!c.selectedRoom}">
+                                            <span class="slds-lookup__item-action slds-lookup__item-action--label" role="option" tabindex="0" id="listbox-option-286">
+                                                <span aura:id="{!Venue_Room__c.Id}" class="slds-truncate">
+                                                    {!Venue_Room__c.Room_Name__c}
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div><h3 class="slds-text-body_regular">Open Seats: <ui:outputText value="{!v.roomOpenSeats}"/></h3></div>
+                    <br />
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="slds-modal__footer">
+                <button class="slds-button slds-button--destructive slds-float--left" onclick="{!c.restart}">
+                    <lightning:icon iconName="utility:refresh" class="slds-button__icon slds-button__icon--left" size="x-small" variant="bare"  />Restart</button>
+                <button class="slds-button slds-button--neutral" onclick="{!c.cancelAssign}">Cancel</button>
+                <button class="slds-button slds-button--success" onclick = "{!c.clickNext}">Next
+                    <lightning:icon iconName="utility:chevronright" class="slds-button__icon slds-button__icon--right" size="x-small" variant="bare" />
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Second Page -->
+    <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal--large  slds-hide" aria-labelledby="header43" aura:id="stepTwo">
+        <div class="slds-modal__container">
+            <!-- Header -->
+            <div class="slds-modal__header">
+                <h2 id="header43" class="slds-text-heading--medium">Mass Assign To <ui:outputText value="{!v.roomValueName}"/> For <ui:outputText value="{!v.eventValueName}"/></h2>
+                <br/>
+                <div class="slds-grid slds-grid_align-space slds-grid_vertical-align-center">
+                    <div><h3 class="slds-text-heading--small slds-float--left">Capacity: <ui:outputText value="{!v.roomCapacity}"/></h3></div>
+                    <div><h3 class="slds-text-heading--small">Occupied Seats: <ui:outputText value="{!v.roomRegCount}"/></h3></div>
+                    <div><h3 class="slds-text-heading--small slds-float--right">Open Seats: <ui:outputText value="{!v.roomOpenSeats}"/></h3></div>
+                    <div><button class="slds-button slds-button--neutral" onclick="{!c.fillRoom}">Fill Room</button></div>
+                </div>
+                <div id ="errorsRegs" class="slds-text-color--error"></div>
+                <br/>
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                    <lightning:icon class="slds-input__icon" iconName="utility:search" size="x-small"/>
+                    <input type="text" class="slds-input slds-lookup__search-input" id="filterTextBox"
+                           placeholder="Search Registrations" onkeyup="{!c.searchBoxChange}"/>
+                </div>
+            </div>
+            <!-- Body -->
+            <div class="slds-modal__content slds-p-around--medium">
+                <!-- Table starts here-->
+                <table class="slds-table slds-table--bordered " role="grid" id="myTable">
+                    <thead>
+                        <tr class="slds-text-title--caps">
+                            <th class="slds-cell-shrink slds-is-sortable slds-is-resizable" scope="col">
+                                <div>
+                                    <ui:inputCheckbox aura:id="selectAll" value="{!v.myBool}" change="{!c.handleCheckboxChange}"/>
+                                </div>
+                            </th>
+                            <th class="slds-is-sortable slds-is-resizable" scope="col" aria-label="Attendee Name">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort </span>
+                                    <span class="slds-truncate" title="Attendee Name">Name</span>
+                                    <div class="slds-icon_container">
+                                        <div aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon">
+                                            <c:svgIcon svgPath="/resource/slds214/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" category="standard" size="x-small" name="arrowdown"  />
+                                        </div>
+                                    </div>  
+                                    <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                </a>
+                                <div class="slds-resizable">
+                                    <label for="cell-resize-handle-203" class="slds-assistive-text">Attendee Name column width</label>
+                                    <input class="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id="cell-resize-handle-203" />
+                                    <span class="slds-resizable__handle">
+                                        <span class="slds-resizable__divider"></span>
+                                    </span>
+                                </div>
+                            </th>
+                            <th class="slds-is-sortable slds-is-resizable" scope="col" aria-label="Registration Number">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort </span>
+                                    <span class="slds-truncate" title="Registration Number">Registration Number</span>
+                                    <div class="slds-icon_container">
+                                        <div aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon">
+                                            <c:svgIcon svgPath="/resource/slds214/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" category="standard" size="x-small" name="arrowdown"  />
+                                        </div>                          
+                                    </div>
+                                    <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                </a>
+                                <div class="slds-is-sortable slds-is-resizable">
+                                    <label for="cell-resize-handle-203" class="slds-assistive-text">Registration Number column width</label>
+                                    <input class="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id="cell-resize-handle-203" />
+                                    <span class="slds-resizable__handle">
+                                        <span class="slds-resizable__divider"></span>
+                                    </span>
+                                </div>
+                            </th>
+                            <th class="slds-is-sortable slds-is-resizable" scope="col" aria-label="Attendee Type">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort </span>
+                                    <span class="slds-truncate" title="Attendee Type">Attendee Type</span>
+                                    <div class="slds-icon_container">
+                                        <div aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon">
+                                            <c:svgIcon svgPath="/resource/slds214/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" category="standard" size="x-small" name="arrowdown"  />
+                                        </div>                          
+                                    </div>
+                                    <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                </a>
+                                <div class="slds-is-sortable slds-is-resizable">
+                                    <label for="cell-resize-handle-203" class="slds-assistive-text">Attendee Type width</label>
+                                    <input class="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id="cell-resize-handle-203" />
+                                    <span class="slds-resizable__handle">
+                                        <span class="slds-resizable__divider"></span>
+                                    </span>
+                                </div>
+                            </th>
+                            <th class="slds-is-sortable slds-is-resizable" scope="col" aria-label="Status">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort </span>
+                                    <span class="slds-truncate" title="Status">Status</span>
+                                    <div class="slds-icon_container">
+                                        <div aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon">
+                                            <c:svgIcon svgPath="/resource/slds214/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" category="standard" size="x-small" name="arrowdown"  />
+                                        </div>                          
+                                    </div>
+                                    <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                </a>
+                                <div class="slds-is-sortable slds-is-resizable">
+                                    <label for="cell-resize-handle-203" class="slds-assistive-text">Status width</label>
+                                    <input class="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id="cell-resize-handle-203" />
+                                    <span class="slds-resizable__handle">
+                                        <span class="slds-resizable__divider"></span>
+                                    </span>
+                                </div>
+                            </th>
+                            <th class="slds-is-sortable slds-is-resizable" scope="col" aria-label="Venue Room">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort </span>
+                                    <span class="slds-truncate" title="Venue Room">Current Room</span>
+                                    <div class="slds-icon_container">
+                                        <div aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon">
+                                            <c:svgIcon svgPath="/resource/slds214/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" category="standard" size="x-small" name="arrowdown"  />
+                                        </div>                          
+                                    </div>
+                                    <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                </a>
+                                <div class="slds-is-sortable slds-is-resizable">
+                                    <label for="cell-resize-handle-203" class="slds-assistive-text">Venue Room width</label>
+                                    <input class="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id="cell-resize-handle-203" />
+                                    <span class="slds-resizable__handle">
+                                        <span class="slds-resizable__divider"></span>
+                                    </span>
+                                </div>
+                            </th>
+                        </tr>     
+                    </thead>
+                    <tbody>
+                        <!--Use the Apex model and controller to fetch server side data -->
+                        <aura:iteration items="{!v.eventRegistrations}" var="Event_Registration__c">
+                            <tr class="slds-hint-parent slds-is-sortable slds-is-resizable">
+                                <td role="gridcell" class="slds-cell-shrink" data-label="Assign">
+                                    <span class="{!Event_Registration__c.showArrow}" style="font-size:18px">&nbsp;&nbsp;&#10551;</span>
+                                    <div class="{!Event_Registration__c.showCheckbox}">
+                                        <ui:inputCheckbox aura:id="checkbox" name="{!Event_Registration__c.Id}" value="{!Event_Registration__c.checked}" change="{!c.handleRelatedEventRegistrations}"/>
+                                    </div>
+                                </td>
+                                <td scope="row">
+                                    <div class="slds-truncate" title="{!Event_Registration__c.Attendee_Name__c}">{!Event_Registration__c.Attendee_Name__c}</div>
+                                </td>
+                                <td role="gridcell"><div class="slds-truncate" title="{!Event_Registration__c.Name}">{!Event_Registration__c.Name}</div></td>
+                                <td role="gridcell"><div class="slds-truncate" title="{!Event_Registration__c.Attendee_Type__c}">{!Event_Registration__c.Attendee_Type__c}</div></td>
+                                <td role="gridcell"><div class="slds-truncate" title="{!Event_Registration__c.Status__c}">{!Event_Registration__c.Status__c}</div></td>
+                                <td role="gridcell"><div class="slds-truncate" title="{!Event_Registration__c.Venue_Room_Name__c}">{!Event_Registration__c.Venue_Room_Name__c}</div></td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody> 
+                </table> 
+                <!--Table ends here-->
+            </div>
+            <!-- Footer -->
+            <div class="slds-modal__footer">
+                <button class="slds-button slds-button--destructive slds-float--left" onclick="{!c.restart}">
+                    <lightning:icon iconName="utility:refresh" class="slds-button__icon slds-button__icon--left" size="x-small" />Restart</button>
+                <button class="slds-button slds-button--neutral" onclick="{!c.cancelAssign}">Cancel</button>
+                <button class="slds-button slds-button--brand" onclick = "{!c.assignButton}">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Success Page -->
+    <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal--large data-aura-rendered-by slds-hide" aria-labelledby="header43" aura:id="success">
+        <div class="slds-modal__container">
+            <!-- Body -->
+            <div class="slds-modal__content slds-p-around--medium">
+                <h2 id="header43" class="slds-text-heading--large" style="text-align: center">Success!</h2>
+                <br/><br/>
+                <img src="{!$Resource.GreenCircleWithCheck}" alt="checkmark" class="successCheck"/>
+                <br/><br/>
+                <h2 class="slds-text-heading--large slds-text-align_center">You have successfully assigned <ui:outputText value="{!v.spotsAssigned}"/> attendees</h2>
+                <br/>
+                <h2 class="slds-text-heading--large slds-text-align_center">to the <ui:outputText value="{!v.roomValueName}"/> for the <ui:outputText value="{!v.eventValueName}"/>!</h2>
+                <br/><br/><br/>
+                <button class="slds-button slds-button--neutral slds-align_absolute-center" onclick="{!c.restart}">Assign another room?</button>
+            </div>
+            <!-- Footer -->
+            <div class="slds-modal__footer">
+                <button class="slds-button slds-button--neutral" onclick="{!c.cancelAssign}">Close</button>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

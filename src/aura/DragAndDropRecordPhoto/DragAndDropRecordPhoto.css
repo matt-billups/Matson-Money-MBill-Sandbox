@@ -1,0 +1,29 @@
+.THIS {
+}
+
+.THIS {
+    text-align: center;
+    float: left;
+    padding: 75px 0px 0px;
+    height: 300px;
+    width: 400px;
+}
+
+.THIS > p {
+    font-size: 14px;
+    color: #BBBBBB;
+    margin: 4px 0;
+}
+
+.THIS img {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 300px;
+	width: auto;
+    height: auto;
+}
+
+.THIS.drop {
+    position: relative;
+    z-index: 2;
+}

@@ -1,0 +1,146 @@
+<aura:component controller="MassAdviserInviteController"
+                implements="force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <style>
+        .modal-body
+        {
+        width:120% !important;
+        padding:0;
+        }
+        .slds-modal
+        {
+        top:100px !important;
+        }
+        .slds-modal__container
+        {
+        width:120% !important;
+        height:90% !important;
+        padding:0;
+        } 
+    </style>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="advisers" type="List" access="GLOBAL"/>
+    <aura:attribute name="selectAll" type="Boolean" access="GLOBAL" default="false"/>  <!--don't this is used -->
+    <aura:handler name="change" value="{!v.selectAll}" action="{!c.handleValueChange}"/> <!-- don't think this is used -->
+    <aura:attribute name="eventName" type="string"/>
+    <aura:attribute name="cancelledEvent" type="Boolean" access="GLOBAL" default="false"/>
+    <aura:attribute name="completedEvent" type="Boolean" access="GLOBAL" default="false"/>
+	<aura:attribute name="isIncludeAdviserProspects" type="Boolean" access="GLOBAL" default="false"/>
+    <aura:attribute name="selectAllChecked" type="boolean"/>
+    <aura:handler event="c:MassAdviserSearchKeyChange" action="{!c.massAdviserSearchKeyChange}"/> 
+    
+    <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal--large data-aura-rendered-by" aria-labelledby="header43">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <lightning:buttonIcon class="slds-button slds-modal__close slds-button--icon-inverse" size="large" iconName="utility:close" variant="bare" onclick="{!c.cancel}" alternativeText="Close window." />
+                <h2 id="header43" class="slds-text-heading--medium slds-p-bottom_small">Select Advisers to invite to <ui:outputText value="{!v.eventName}" /> 
+                </h2>
+                <!-- Place holder to show we can put search in here too-->
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left" id="icon">
+                    <lightning:icon class="slds-input__icon" iconName="utility:search" size="x-small"/>
+                    <input type="search" class="slds-input slds-lookup__search-input" id="searchTextBox" placeholder="Search Name" onkeyup="{!c.searchKeyChange}"/>
+                </div>
+            <br></br>
+                <ui:inputCheckbox aura:id="prospectsCheckbox" class="red-checkbox" name="prospectsCheckbox" change="{!c.includeAdviserProspects}"/>    <div class= "checkbox-div"> Include Adviser Prospects</div>         
+            </div> 
+            
+            <div class="slds-modal__content slds-p-around--medium"> 
+                <div id ="cancelledErrorBottom" class="slds-text-color--error" style="text-align:center;"> </div>
+                <div id ="completedErrorBottom" class="slds-text-color--error" style="text-align:center;"> </div>
+                <table class="slds-table slds-table--bordered" role="grid" id="myTable">
+                    <thead>
+                        <tr class="slds-text-title--caps">
+                            <th class="slds-cell-shrink slds-is-sortable slds-is-resizable" scope="col">
+                                <div>
+                                    <ui:inputCheckbox aura:id="selectAll" value="{!v.selectAllChecked}" change="{!c.handleCheckboxChange}"/>
+                                </div>
+                            </th>
+                            <th class="slds-is-sortable slds-is-resizable" scope="col" aria-label="Primary Contact Name">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort </span>
+                                    <span class="slds-truncate" title="Primary Contact Name">Name</span>
+                                    <div class="slds-icon_container">
+                                        <div aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon">
+                                            <c:svgIcon svgPath="/resource/slds214/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" category="standard" size="x-small" name="arrowdown"  />
+                                        </div>
+                                    </div>  
+                                    <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                </a>
+                                <div class="slds-resizable">
+                                    <label for="cell-resize-handle-203" class="slds-assistive-text">Primary Contact Name column width</label>
+                                    <input class="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id="cell-resize-handle-203" />
+                                    <span class="slds-resizable__handle">
+                                        <span class="slds-resizable__divider"></span>
+                                    </span>
+                                </div>
+                            </th>
+                            <th class="slds-is-sortable slds-is-resizable" scope="col" aria-label="Company">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort </span>
+                                    <span class="slds-truncate" title="Adviser Number">Adviser Number</span>
+                                    <div class="slds-icon_container">
+                                        <div aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon">
+                                            <c:svgIcon svgPath="/resource/slds214/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" category="standard" size="x-small" name="arrowdown"  />
+                                        </div>                          
+                                    </div>
+                                    <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                </a>
+                                <div class="slds-is-sortable slds-is-resizable">
+                                    <label for="cell-resize-handle-203" class="slds-assistive-text">Adviser Number column width</label>
+                                    <input class="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id="cell-resize-handle-203" />
+                                    <span class="slds-resizable__handle">
+                                        <span class="slds-resizable__divider"></span>
+                                    </span>
+                                </div>
+                            </th>
+                            <th class="slds-is-sortable slds-is-resizable" scope="col" aria-label="Email">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort </span>
+                                    <span class="slds-truncate" title="Email">Email</span>
+                                    <div class="slds-icon_container">
+                                        <div aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon">
+                                            <c:svgIcon svgPath="/resource/slds214/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" category="standard" size="x-small" name="arrowdown"  />
+                                        </div>                          
+                                    </div>
+                                    <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                </a>
+                                <div class="slds-is-sortable slds-is-resizable">
+                                    <label for="cell-resize-handle-203" class="slds-assistive-text">Email width</label>
+                                    <input class="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id="cell-resize-handle-203" />
+                                    <span class="slds-resizable__handle">
+                                        <span class="slds-resizable__divider"></span>
+                                    </span>
+                                </div>
+                            </th>                
+                        </tr>     
+                    </thead>
+                    <tbody class="slds-scrollable_y">      
+                        <!-- Use the Apex model and controller to fetch server side data -->
+                        <aura:iteration items="{!v.advisers}" var="adv">
+                            
+                            <tr class="slds-hint-parent slds-is-sortable slds-is-resizable">
+                                <td role="gridcell" class="slds-cell-shrink" data-label="Invite">
+                                    <div>
+                                        <ui:inputCheckbox aura:id="checkbox" name="checkbox"   value="{!adv.checked}"   /> 
+                                    </div>
+                                </td>
+                                <td scope="row">
+                                    <div class="slds-truncate" title="{!adv.Primary_Contact_Name__c}">{!adv.Primary_Contact_Name__c}</div>
+                                </td>
+                                <td role="gridcell"><div class="slds-truncate" title="{!adv.Adviser_Number__c}">{!adv.Adviser_Number__c}</div></td>
+                                
+                                <td role="gridcell"><div class="slds-truncate" title="{!adv.Contact_Email__c}"><a href="javascript:void(0);">{!adv.Contact_Email__c}</a></div></td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>    
+                <br></br>
+            </div>
+            <div class="slds-modal__footer">
+                <button class="slds-button slds-button--neutral" onclick="{!c.cancel}">Cancel</button>
+                <button id="inviteButton" class="slds-button slds-button--brand" onclick="{!c.inviteAdvisersButton }">Invite selected Advisers</button>
+            </div> 
+        </div>
+    </div>
+</aura:component>

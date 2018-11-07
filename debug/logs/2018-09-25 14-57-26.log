@@ -1,0 +1,27 @@
+36.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:57:25.0 (73922)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+14:57:25.0 (111158)|EXECUTION_STARTED
+14:57:25.0 (116288)|CODE_UNIT_STARTED|[EXTERNAL]|066180000001Aq4|VF: /apex/DeepCloneMatsonEventFlowRedirect
+14:57:25.0 (260404)|VF_DESERIALIZE_VIEWSTATE_BEGIN|066180000001Aq4
+14:57:25.0 (6657496)|VF_DESERIALIZE_VIEWSTATE_END
+14:57:25.0 (77027732)|VF_SERIALIZE_VIEWSTATE_BEGIN|066180000001Aq4
+14:57:25.0 (79908930)|VF_SERIALIZE_VIEWSTATE_END
+14:57:25.82 (82317438)|CUMULATIVE_LIMIT_USAGE
+14:57:25.82 (82317438)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 252 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:57:25.82 (82317438)|CUMULATIVE_LIMIT_USAGE_END
+
+14:57:25.0 (82357077)|CODE_UNIT_FINISHED|VF: /apex/DeepCloneMatsonEventFlowRedirect
+14:57:25.0 (83247456)|EXECUTION_FINISHED

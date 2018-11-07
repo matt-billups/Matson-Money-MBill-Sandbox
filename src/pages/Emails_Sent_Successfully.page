@@ -1,0 +1,3 @@
+<apex:page >
+  <h1>Your request to send email(s) has been received. You will receive an email notification once all emails have been sent.</h1>
+</apex:page>

@@ -1,0 +1,9 @@
+44.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+08:42:28.0 (87735)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+08:42:28.0 (120481)|EXECUTION_STARTED
+08:42:28.0 (125407)|CODE_UNIT_STARTED|[EXTERNAL]|VisualForce View State
+08:42:28.0 (4924301)|CODE_UNIT_FINISHED|VisualForce View State
+08:42:28.0 (5930250)|EXECUTION_FINISHED
+08:42:28.10 (10081744)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+08:42:28.10 (58762808)|FLOW_ELEMENT_ERROR|This error occurred when the flow tried to create records: INVALID_TYPE_ON_FIELD_IN_RECORD: T-Shirt Included?: value not of required type: . You can look up ExceptionCode values in the <a href='https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm#'>SOAP API Developer Guide</a>.|FlowRecordCreate|Create_New_Event
+08:42:28.10 (79553753)|FLOW_ELEMENT_ERROR|This error occurred when the flow tried to create records: INVALID_TYPE_ON_FIELD_IN_RECORD: T-Shirt Included?: value not of required type: . You can look up ExceptionCode values in the <a href='https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm#'>SOAP API Developer Guide</a>.|FlowScreen|Matson_Event_Cloning

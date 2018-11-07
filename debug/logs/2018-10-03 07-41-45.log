@@ -1,0 +1,32 @@
+36.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+10:41:44.0 (299527)|USER_INFO|[EXTERNAL]|00536000002xDc2|jessica.doyal@matsonmoney.com.mbill|Eastern Standard Time|GMT-04:00
+10:41:44.0 (330841)|EXECUTION_STARTED
+10:41:44.0 (336940)|CODE_UNIT_STARTED|[EXTERNAL]|066180000001Aq4|VF: /apex/DeepCloneMatsonEventFlowRedirect
+10:41:44.17 (17954017)|FLOW_CREATE_INTERVIEW_BEGIN||30036000000U6ba|301180000002y5K
+10:41:44.17 (18442545)|FLOW_CREATE_INTERVIEW_END|991732faf47c923579d64f89191663a47cec1-251d|Deep Clone Matson Event
+10:41:44.18 (18557083)|FLOW_START_INTERVIEW_BEGIN|991732faf47c923579d64f89191663a47cec1-251d|Deep Clone Matson Event
+10:41:44.18 (136593985)|FLOW_ELEMENT_ERROR|The flow couldn't find the EventRecordTypeObject resource.|FlowDecision|Primary_or_Secondary_Record_Type
+10:41:44.18 (136660968)|FLOW_START_INTERVIEW_END|991732faf47c923579d64f89191663a47cec1-251d|Deep Clone Matson Event
+10:41:44.0 (140424691)|VF_SERIALIZE_VIEWSTATE_BEGIN|066180000001Aq4
+10:41:44.0 (147152066)|VF_SERIALIZE_VIEWSTATE_END
+10:41:44.0 (149599944)|CODE_UNIT_STARTED|[EXTERNAL]|Generate Metadata
+10:41:44.0 (150947159)|CODE_UNIT_FINISHED|Generate Metadata
+10:41:44.241 (241898171)|CUMULATIVE_LIMIT_USAGE
+10:41:44.241 (241898171)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:41:44.241 (241898171)|CUMULATIVE_LIMIT_USAGE_END
+
+10:41:44.0 (241946837)|CODE_UNIT_FINISHED|VF: /apex/DeepCloneMatsonEventFlowRedirect
+10:41:44.0 (242880994)|EXECUTION_FINISHED

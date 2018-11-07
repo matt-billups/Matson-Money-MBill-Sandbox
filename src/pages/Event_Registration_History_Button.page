@@ -1,0 +1,124 @@
+<apex:page standardController="Event_Registration__c"
+           extensions="EventRegistrationExtController"
+           tabStyle="Event_Registration__c"
+           recordSetVar="AllRegistrants" >
+    <style type="text/css">
+        .text{
+        }
+        .hideDownloadTarget {  position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
+        .outBorder {
+        border-right:1px outset lightGray;
+        border-bottom:1px outset lightGray;
+        width:100%;
+        font-size: 16px;
+        }
+        .inBorder{
+        border-top:1px outset lightGray;
+        border-left:1px outset lightGray;
+        padding:2px;
+        width:14%;
+        font-size: 16px;
+        }
+        .header{
+        border-top:1px outset darkGray;
+        border-left:1px outset darkGray;
+        border-bottom:1px outset darkGray;
+        padding:2px;
+        width:14%;
+        }
+        .footer{
+        border-top:1px outset lightGray;
+        border-left:1px outset lightGray;
+        padding-right:20px;
+        padding-top:8px;
+        padding-bottom:8px;
+        text-align:right;
+        }
+        
+        
+        .titleText{
+        float: left;
+        padding-bottom:20px;
+        vertical-align: middle;
+        font-weight: bolder;
+        font-size: 18px;
+        
+        }
+        .titleButton{
+        float:right;
+        padding-bottom:20px;
+        }
+        
+        .button{
+        color:white !important;
+        border:1px;
+        border-radius: 2px;
+        padding: 0.3rem 0.8rem;
+        background:#0070d2;
+        border-color: #0070d2;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 16px;
+        
+        }
+        .button:hover{
+        
+        text-decoration: none;
+        background:#005dac;
+        color:white;
+        }
+        
+    </style>
+    <apex:form >
+        <apex:pageBlock id="pBlock">
+            <p class="titleText">
+                Event Registration Status History
+            </p>
+            <p class="titleButton">
+                <apex:commandLink id="downloadLink2" value="Download" action="{!getHistoryCSVPage}"  
+                                  target="hiddenFrame" styleClass="button"/>   
+            </p> 
+            
+            <apex:dataTable value="{!eventRegistrationHistoryList}" var="eventRegistrationHistory" id="theTable"
+                            rowClasses="odd,even" styleClass="outBorder" footerClass="footer" >               
+                
+                <apex:column headerClass="header" styleclass="inBorder">
+                    <apex:facet name="header">Registrant Name</apex:facet> 
+                    <apex:outputText value="{!eventRegistrationHistory.Parent.Attendee_Name__c}"/>
+                </apex:column>
+                
+                <apex:column headerClass="header" styleclass="inBorder">
+                    <apex:facet name="header">Field Changed</apex:facet>
+                    <apex:outputText value="{!eventRegistrationHistory.Field}"/>
+                </apex:column>
+                
+                <apex:column headerClass="header" styleclass="inBorder">
+                    <apex:facet name="header">Old Value</apex:facet>
+                    <apex:outputText value="{!eventRegistrationHistory.OldValue}"/>
+                </apex:column>
+                <apex:column headerClass="header" styleclass="inBorder">
+                    <apex:facet name="header">New Value</apex:facet>
+                    <apex:outputText value="{!eventRegistrationHistory.NewValue}"/>
+                </apex:column>
+                <apex:column headerClass="header" styleclass="inBorder">
+                    <apex:facet name="header" >Date Changed</apex:facet>
+                    <apex:outputField value="{!eventRegistrationHistory.CreatedDate}">
+                      
+                    </apex:outputField>
+                </apex:column>
+                <apex:column headerClass="header" styleclass="inBorder">
+                    <apex:facet name="header">Modified By</apex:facet>
+                    <apex:outputText value="{!eventRegistrationHistory.Createdby.Name}"/>
+                </apex:column>
+                <apex:column headerClass="header" styleclass="inBorder">
+                    <apex:facet name="header">Event Name</apex:facet>
+                    <apex:outputText value="{!eventRegistrationHistory.Parent.Event_Name__c}"/>
+                </apex:column>
+                
+            </apex:dataTable>    
+        </apex:pageBlock>
+        <apex:outputText value="To download the .csv file, click " /><apex:commandLink id="downloadLink" value=" Download." action="{!getHistoryCSVPage}"  
+                                                                                       target="hiddenFrame" /> 
+    </apex:form>
+    <iframe id="downloadTargetIF" name="hiddenFrame" class="hideDownloadTarget"/> 
+</apex:page>

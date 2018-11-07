@@ -1,0 +1,5 @@
+<apex:page standardController="Event_Registration__c"
+           extensions="EventRegistrationExtController"
+           tabStyle="Event_Registration__c"
+           recordSetVar="AllRegistrants"
+           contentType="text/csv#EventRegistrationHistory_{!TODAY()}.csv">{!historyForSelected}</apex:page>

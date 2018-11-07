@@ -1,0 +1,25 @@
+<apex:page controller="mm_publicEmailOptOut" standardStylesheets="false" sidebar="false" showheader="false">
+    
+    <apex:outputLink value="{!$Site.Prefix}/secur/logout.jsp" rendered="  {!NOT(ISPICKVAL($User.UserType,'Guest'))}">{!$Label.site.logout}</apex:outputLink>
+    
+    <apex:includeLightning />
+
+    
+    <div id="lightning" />
+    
+     <script>
+ 
+        $Lightning.use("c:mm_EmailOptOutApp", function() {
+          $Lightning.createComponent("c:mm_EmailOptOut",
+          "",
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    
+ 
+    </script>
+    
+    
+</apex:page>

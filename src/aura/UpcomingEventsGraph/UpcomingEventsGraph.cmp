@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes"
+                access="global"
+                controller="UpcomingEventsGraphController">
+    
+    <ltng:require scripts="{!$Resource.Chartjs271}"
+                  afterScriptsLoaded="{!c.afterScriptLoad}"/>
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></html>
+    
+    <div class="slds-grid slds-wrap" style="background-color: rgb(255,255,255)">
+        <div class="slds-col slds-p-top_medium  slds-size--1-of-1">
+            <div id = "colors">
+                <canvas id="graphCanvas" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</aura:component>

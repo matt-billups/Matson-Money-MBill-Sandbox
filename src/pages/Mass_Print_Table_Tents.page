@@ -1,0 +1,32 @@
+<apex:page standardController="Event_Registration__c" extensions="EventRegistrationExtController" tabStyle="Event_Registration__c" recordSetVar="AllRegistrants" >
+    <apex:form >
+        <apex:pageBlock id="pBlock" title="Mass Print Table Tents" >
+
+            <apex:messages />
+
+            <apex:pageBlockButtons >           
+                <apex:commandButton id="printSelectedButton" action="{!printSelectedTableTents}" value="Print for Selected Registrants" status="pageStatus" reRender="text" disabled="{!NOT(isPrinterSelected) || NOT(hasSelectedRegistrations)}"/>
+                <apex:commandButton action="{!printAllTableTents}" value="Print for All Registrants" status="pageStatus" reRender="text" disabled="{!NOT(isPrinterSelected)}"/>
+                <apex:commandButton action="{!printTableTentProof}" value="Print Table Tent Proof" reRender="text" disabled="{!NOT(isPrinterSelected)}"/>
+            </apex:pageBlockButtons>                        
+            
+            <apex:pageBlockSection title="Printer Selection" columns="1" collapsible="false">
+                <apex:actionStatus id="pageStatus">
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <img src="/img/loading32.gif" width="25" height="25" />
+                            <apex:outputLabel value="Printing table tents..."/>
+                        </apex:outputPanel>
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:pageBlockSectionItem html-width="100%" >
+                    <apex:outputLabel value="Printer" for="printer"/>
+                    <apex:selectList id="printer" size="1" value="{!SelectedPrinterId}" multiselect="false" style="min-width: 30%;">
+                        <apex:selectOptions value="{!PrinterListItems}"/>
+                        <apex:actionSupport event="onchange" reRender="pBlock" />                        
+                    </apex:selectList>                        
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

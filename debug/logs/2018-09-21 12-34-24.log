@@ -1,0 +1,1129 @@
+41.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+12:34:01.0 (338183)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+12:34:01.0 (392358)|EXECUTION_STARTED
+12:34:01.0 (398256)|CODE_UNIT_STARTED|[EXTERNAL]|01p3600000JWFFr|SendFirstEmailClassTest.SendFirstEmailTest()
+12:34:01.0 (610990)|HEAP_ALLOCATE|[72]|Bytes:3
+12:34:01.0 (643961)|HEAP_ALLOCATE|[77]|Bytes:152
+12:34:01.0 (662262)|HEAP_ALLOCATE|[342]|Bytes:408
+12:34:01.0 (686191)|HEAP_ALLOCATE|[355]|Bytes:408
+12:34:01.0 (708322)|HEAP_ALLOCATE|[467]|Bytes:48
+12:34:01.0 (744519)|HEAP_ALLOCATE|[139]|Bytes:6
+12:34:01.0 (769793)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:81
+12:34:01.0 (785450)|METHOD_ENTRY|[1]|01p3600000JWFFr|SendFirstEmailClassTest.SendFirstEmailClassTest()
+12:34:01.0 (794381)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (798036)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (802334)|METHOD_EXIT|[1]|SendFirstEmailClassTest
+12:34:01.0 (983526)|HEAP_ALLOCATE|[50]|Bytes:5
+12:34:01.0 (1012561)|HEAP_ALLOCATE|[56]|Bytes:5
+12:34:01.0 (1027298)|HEAP_ALLOCATE|[64]|Bytes:7
+12:34:01.0 (1061263)|STATEMENT_EXECUTE|[5]
+12:34:01.0 (1063917)|STATEMENT_EXECUTE|[6]
+12:34:01.0 (1067204)|HEAP_ALLOCATE|[6]|Bytes:91
+12:34:01.0 (1088360)|HEAP_ALLOCATE|[6]|Bytes:4
+12:34:01.0 (1496823)|SOQL_EXECUTE_BEGIN|[6]|Aggregations:0|SELECT Id, Name, isActive FROM User WHERE (User.Profile.Name = 'Sales' AND isActive = TRUE)
+12:34:01.0 (13290131)|SOQL_EXECUTE_END|[6]|Rows:5
+12:34:01.0 (13316634)|HEAP_ALLOCATE|[6]|Bytes:24
+12:34:01.0 (13352131)|HEAP_ALLOCATE|[6]|Bytes:475
+12:34:01.0 (13453950)|HEAP_ALLOCATE|[6]|Bytes:24
+12:34:01.0 (13469702)|VARIABLE_SCOPE_BEGIN|[6]|coaches|List<User>|true|false
+12:34:01.0 (13545216)|VARIABLE_ASSIGNMENT|[6]|coaches|[{"Id":"00536000001OWzVAAW","Name":"Alex Ash","IsActive":true,"ProfileId":"00e36000000ZkIYAA0"},{"Id":"00536000001OWzXAAW","Name":"CJ Lawson","IsActive":true,"ProfileId":"00e36000000ZkIYAA0"},{"Id":"00536000001OWzYAAW","Name":"Josh Crawford","IsActive":true,"ProfileId":"00e36000000ZkIYAA0"},{"Id":"005360000071MQTAA2","Name":"Brian Jennings","IsActive":true,"ProfileId":"00e36000000ZkIYAA0"},{"Id":"005360000075bKcAAI","Name":"Mark Matson","IsActive":true,"ProfileId":"00e36000000ZkIYAA0"}]|0x1557b0f9
+12:34:01.0 (13564968)|STATEMENT_EXECUTE|[7]
+12:34:01.0 (13570472)|HEAP_ALLOCATE|[7]|Bytes:96
+12:34:01.0 (13590658)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (13826040)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|SELECT Id, Name FROM RecordType WHERE (Name = 'Adviser Prospect' AND SobjectType = 'Adviser__c')
+12:34:01.0 (31694369)|SOQL_EXECUTE_END|[7]|Rows:1
+12:34:01.0 (31723515)|HEAP_ALLOCATE|[7]|Bytes:8
+12:34:01.0 (31741967)|HEAP_ALLOCATE|[7]|Bytes:53
+12:34:01.0 (31817632)|HEAP_ALLOCATE|[7]|Bytes:8
+12:34:01.0 (31834401)|HEAP_ALLOCATE|[7]|Bytes:36
+12:34:01.0 (31906224)|HEAP_ALLOCATE|[7]|Bytes:12
+12:34:01.0 (31917851)|VARIABLE_SCOPE_BEGIN|[7]|RT|RecordType|true|false
+12:34:01.0 (31950422)|VARIABLE_ASSIGNMENT|[7]|RT|{"Id":"01236000000yILNAA2","Name":"Adviser Prospect"}|0x1e6fb0d0
+12:34:01.0 (31964120)|STATEMENT_EXECUTE|[11]
+12:34:01.0 (32003824)|HEAP_ALLOCATE|[11]|Bytes:4
+12:34:01.0 (32107351)|HEAP_ALLOCATE|[11]|Bytes:24
+12:34:01.0 (32158077)|VARIABLE_ASSIGNMENT|[11]|this.Crypto__c|"12345678912345678911 (4 more) ..."|0x1186d9b3
+12:34:01.0 (32229078)|HEAP_ALLOCATE|[11]|Bytes:8
+12:34:01.0 (32245358)|DML_BEGIN|[11]|Op:Insert|Type:EventTokenHashKey__c|Rows:1
+12:34:01.0 (32276064)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (106015404)|DML_END|[11]
+12:34:01.0 (106037684)|STATEMENT_EXECUTE|[14]
+12:34:01.0 (106086652)|HEAP_ALLOCATE|[14]|Bytes:4
+12:34:01.0 (106203773)|VARIABLE_SCOPE_BEGIN|[14]|acc|Account|true|false
+12:34:01.0 (106231726)|VARIABLE_ASSIGNMENT|[14]|acc|{}|0x7d19669b
+12:34:01.0 (106238059)|STATEMENT_EXECUTE|[15]
+12:34:01.0 (106243019)|HEAP_ALLOCATE|[15]|Bytes:20
+12:34:01.0 (106290692)|VARIABLE_ASSIGNMENT|[15]|this.Name|"Matson Money Default"|0x7d19669b
+12:34:01.0 (106297136)|STATEMENT_EXECUTE|[16]
+12:34:01.0 (106315128)|HEAP_ALLOCATE|[16]|Bytes:8
+12:34:01.0 (106322436)|DML_BEGIN|[16]|Op:Insert|Type:Account|Rows:1
+12:34:01.0 (106344866)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.111 (111873516)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.111 (111930281)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.111 (111939489)|VARIABLE_SCOPE_BEGIN|[1]|this|pi.LogAccountChange|true|false
+12:34:01.111 (111969532)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x28b0e958
+12:34:01.113 (113701587)|CUMULATIVE_LIMIT_USAGE
+12:34:01.113 (113701587)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 6 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.113 (113701587)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.153 (153422781)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.153 (153509837)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.153 (153523498)|VARIABLE_SCOPE_BEGIN|[1]|this|pi.LogAccountChange|true|false
+12:34:01.153 (153568742)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6a8dcfe7
+12:34:01.154 (154435071)|CUMULATIVE_LIMIT_USAGE
+12:34:01.154 (154435071)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 6 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.154 (154435071)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (165082990)|DML_END|[16]
+12:34:01.0 (165100387)|STATEMENT_EXECUTE|[19]
+12:34:01.0 (165152107)|HEAP_ALLOCATE|[19]|Bytes:4
+12:34:01.0 (165285123)|VARIABLE_SCOPE_BEGIN|[19]|con1|Contact|true|false
+12:34:01.0 (165312461)|VARIABLE_ASSIGNMENT|[19]|con1|{}|0x195814ce
+12:34:01.0 (165322501)|STATEMENT_EXECUTE|[20]
+12:34:01.0 (165328380)|HEAP_ALLOCATE|[20]|Bytes:8
+12:34:01.0 (165418972)|VARIABLE_ASSIGNMENT|[20]|this.FirstName|"Chester1"|0x195814ce
+12:34:01.0 (165430853)|STATEMENT_EXECUTE|[21]
+12:34:01.0 (165436197)|HEAP_ALLOCATE|[21]|Bytes:7
+12:34:01.0 (165493270)|VARIABLE_ASSIGNMENT|[21]|this.LastName|"Tester1"|0x195814ce
+12:34:01.0 (165503470)|STATEMENT_EXECUTE|[22]
+12:34:01.0 (165508307)|HEAP_ALLOCATE|[22]|Bytes:29
+12:34:01.0 (165555730)|VARIABLE_ASSIGNMENT|[22]|this.Email|"Kelly.Carroll@matson (9 more) ..."|0x195814ce
+12:34:01.0 (165565033)|STATEMENT_EXECUTE|[23]
+12:34:01.0 (165569288)|HEAP_ALLOCATE|[23]|Bytes:10
+12:34:01.0 (165610851)|VARIABLE_ASSIGNMENT|[23]|this.Office_Phone__c|"8376290231"|0x195814ce
+12:34:01.0 (165620821)|STATEMENT_EXECUTE|[24]
+12:34:01.0 (165625177)|HEAP_ALLOCATE|[24]|Bytes:13
+12:34:01.0 (165664972)|VARIABLE_ASSIGNMENT|[24]|this.MailingStreet|"1284 Test Ave"|0x195814ce
+12:34:01.0 (165676592)|STATEMENT_EXECUTE|[25]
+12:34:01.0 (165680797)|HEAP_ALLOCATE|[25]|Bytes:10
+12:34:01.0 (165715257)|VARIABLE_ASSIGNMENT|[25]|this.MailingCity|"Cincinnati"|0x195814ce
+12:34:01.0 (165723898)|STATEMENT_EXECUTE|[26]
+12:34:01.0 (165727896)|HEAP_ALLOCATE|[26]|Bytes:2
+12:34:01.0 (165759881)|VARIABLE_ASSIGNMENT|[26]|this.MailingStateCode|"OH"|0x195814ce
+12:34:01.0 (165769606)|STATEMENT_EXECUTE|[27]
+12:34:01.0 (165773026)|HEAP_ALLOCATE|[27]|Bytes:5
+12:34:01.0 (165801710)|VARIABLE_ASSIGNMENT|[27]|this.MailingPostalCode|"45219"|0x195814ce
+12:34:01.0 (165809573)|STATEMENT_EXECUTE|[28]
+12:34:01.0 (165881230)|VARIABLE_ASSIGNMENT|[28]|this.AccountId|"0011800000aMYAKAA4"|0x195814ce
+12:34:01.0 (165891405)|STATEMENT_EXECUTE|[29]
+12:34:01.0 (165917501)|HEAP_ALLOCATE|[29]|Bytes:8
+12:34:01.0 (165932666)|DML_BEGIN|[29]|Op:Insert|Type:Contact|Rows:1
+12:34:01.0 (165964554)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.177 (177840779)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.177 (177895536)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.177 (177904735)|VARIABLE_SCOPE_BEGIN|[1]|this|pi.LogContactChange|true|false
+12:34:01.177 (177933736)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x1bb97fd
+12:34:01.181 (181050478)|CUMULATIVE_LIMIT_USAGE
+12:34:01.181 (181050478)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 6 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.181 (181050478)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (183253773)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuT|addAccountOnCreateContact on Contact trigger event BeforeInsert|__sfdc_trigger/addAccountOnCreateContact
+12:34:01.0 (183288499)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (183328848)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+12:34:01.0 (183337337)|VARIABLE_SCOPE_BEGIN|[1]|this|addAccountOnCreateContact|true|false
+12:34:01.0 (183363087)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3e0034f2
+12:34:01.0 (183404287)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+12:34:01.0 (183413196)|VARIABLE_SCOPE_BEGIN|[1]|this|addAccountOnCreateContact|true|false
+12:34:01.0 (183430311)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3e0034f2
+12:34:01.0 (183440800)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (183443320)|STATEMENT_EXECUTE|[3]
+12:34:01.0 (183466401)|HEAP_ALLOCATE|[3]|Bytes:4
+12:34:01.0 (183522953)|VARIABLE_ASSIGNMENT|[3]|this.account|{}|0x3e0034f2
+12:34:01.0 (183533335)|STATEMENT_EXECUTE|[4]
+12:34:01.0 (183538573)|HEAP_ALLOCATE|[4]|Bytes:72
+12:34:01.0 (183559210)|HEAP_ALLOCATE|[4]|Bytes:4
+12:34:01.0 (183763465)|SOQL_EXECUTE_BEGIN|[4]|Aggregations:0|SELECT Id, Name FROM Account WHERE Name = 'Matson Money Default' LIMIT 1
+12:34:01.0 (189298743)|SOQL_EXECUTE_END|[4]|Rows:1
+12:34:01.0 (189319109)|HEAP_ALLOCATE|[4]|Bytes:8
+12:34:01.0 (189332332)|HEAP_ALLOCATE|[4]|Bytes:57
+12:34:01.0 (189357236)|HEAP_ALLOCATE|[4]|Bytes:8
+12:34:01.0 (189390636)|VARIABLE_ASSIGNMENT|[4]|this.accts|[{"Id":"0011800000aMYAKAA4","Name":"Matson Money Default"}]|0x3e0034f2
+12:34:01.0 (189446283)|STATEMENT_EXECUTE|[10]
+12:34:01.0 (189448741)|STATEMENT_EXECUTE|[11]
+12:34:01.0 (189461903)|HEAP_ALLOCATE|[11]|Bytes:12
+12:34:01.0 (189479831)|VARIABLE_ASSIGNMENT|[11]|this.account|{"Id":"0011800000aMYAKAA4","Name":"Matson Money Default"}|0x3e0034f2
+12:34:01.0 (189529793)|HEAP_ALLOCATE|[14]|Bytes:5
+12:34:01.0 (189544541)|HEAP_ALLOCATE|[14]|Bytes:4
+12:34:01.0 (189552393)|VARIABLE_SCOPE_BEGIN|[14]|c|Contact|true|false
+12:34:01.0 (191924809)|VARIABLE_ASSIGNMENT|[14]|c|{"AccountId":"0011800000aMYAKAA4","Email":"kelly.carroll@matson (9 more) ...","DoNotCall":false,"ContactFnameLNameLegacyID__c":"Chester1Tester1","HasOptedOutOfFax":false,"Office_Phone_Formula__c":"8376290231","pi__Needs_Score_Synced__c":false,"Matson_Event_Marketing_Email_Opt_Out__c":false,"OwnerId":"00518000002hPQOAA2","MailingPostalCode":"45219","IsDeleted":false,"IsEmailBounced":false,"Preferred_Name__c":"Chester1","OtherCountryCode":"US","FirstName":"Chester1","HasOptedOutOfEmail":false,"MailingCity":"Cincinnati","Full_Name__c":"Chester1 Tester1","MailingStateCode":"OH","MailingCountryCode":"US","IsSplitName__c":false,"pi__pardot_hard_bounced__c":false,"Office_Phone__c":"8376290231","LastName":"Tester1","MailingStreet":"1284 Test Ave"}|0x4a563a76
+12:34:01.0 (191944446)|STATEMENT_EXECUTE|[14]
+12:34:01.0 (191946870)|STATEMENT_EXECUTE|[15]
+12:34:01.0 (192378553)|VARIABLE_ASSIGNMENT|[15]|this.AccountId|"0011800000aMYAKAA4"|0x4a563a76
+12:34:01.0 (192403916)|HEAP_ALLOCATE|[14]|Bytes:5
+12:34:01.0 (192420307)|VARIABLE_ASSIGNMENT|[14]|c|null|
+12:34:01.192 (192431012)|CUMULATIVE_LIMIT_USAGE
+12:34:01.192 (192431012)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 7 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.192 (192431012)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (193507748)|CODE_UNIT_FINISHED|addAccountOnCreateContact on Contact trigger event BeforeInsert|__sfdc_trigger/addAccountOnCreateContact
+12:34:01.0 (201085100)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Contact:new
+12:34:01.0 (201096792)|VALIDATION_RULE|03d36000000y4Yd|Asst_must_be_10_digits_and_numeric
+12:34:01.0 (201201090)|VALIDATION_FORMULA|AND(NOT(ISBLANK( AssistantPhone )), 
+
+OR(NOT(ISNUMBER(AssistantPhone )), 
+LEN(AssistantPhone ) >10) 
+
+
+)|AssistantPhone=null
+12:34:01.0 (201219421)|VALIDATION_PASS
+12:34:01.0 (201222553)|VALIDATION_RULE|03d36000000nF6a|DOB_Validation
+12:34:01.0 (201456202)|VALIDATION_FORMULA|OR(
+    DOB__c > TODAY(), 
+    YEAR(DOB__c) < YEAR(TODAY())- 115, 
+    OR(
+        AND(YEAR(DOB__c) = YEAR(TODAY()) - 115, 
+            OR(
+                MONTH(DOB__c) < MONTH(TODAY()), 
+                AND(
+                    MONTH(DOB__c) = MONTH(TODAY()), 
+                    DAY(DOB__c) < DAY(TODAY())
+                )
+            )
+        )
+    )
+)|DOB__c=null
+12:34:01.0 (201471457)|VALIDATION_PASS
+12:34:01.0 (201475930)|VALIDATION_RULE|03d36000000y4Ye|Fax_must_be_10_digits_and_numeric
+12:34:01.0 (201579465)|VALIDATION_FORMULA|AND(NOT(ISBLANK(Fax)),
+
+ OR(NOT(ISNUMBER(Fax)) ,
+   LEN(Fax) >10)
+
+
+
+)|Fax=null
+12:34:01.0 (201588677)|VALIDATION_PASS
+12:34:01.0 (201591171)|VALIDATION_RULE|03d36000000y4Yf|Home_Phone_must_be_10_digits_and_numeric
+12:34:01.0 (201688474)|VALIDATION_FORMULA|AND(NOT(ISBLANK( HomePhone )), 
+
+OR(NOT(ISNUMBER(HomePhone )) , 
+LEN(HomePhone ) >10) 
+
+
+
+)|HomePhone=null
+12:34:01.0 (201698721)|VALIDATION_PASS
+12:34:01.0 (201701230)|VALIDATION_RULE|03d36000000y4Yg|Mobile_must_be_10_digits_and_numeric
+12:34:01.0 (201800453)|VALIDATION_FORMULA|AND(NOT(ISBLANK( MobilePhone )), 
+
+OR(NOT(ISNUMBER(MobilePhone )) , 
+LEN(MobilePhone ) >10) 
+
+
+
+)|MobilePhone=null
+12:34:01.0 (201809798)|VALIDATION_PASS
+12:34:01.0 (201812220)|VALIDATION_RULE|03d36000000nF6b|Nine_Digits_in_SSN
+12:34:01.0 (201978448)|VALIDATION_FORMULA|AND(NOT(ISBLANK( Social_Security_Number__c )), OR(NOT(ISNUMBER( Social_Security_Number__c )), NOT(LEN( Social_Security_Number__c ) = 9)))|Social_Security_Number__c=*****
+12:34:01.0 (201988711)|VALIDATION_PASS
+12:34:01.0 (201991297)|VALIDATION_RULE|03d36000000y4Yh|Office_Phone_must_be_10_digits_numeric
+12:34:01.0 (202116384)|VALIDATION_FORMULA|AND(NOT(ISBLANK(Office_Phone__c)), 
+
+OR(NOT(ISNUMBER(Office_Phone__c)), 
+LEN(Office_Phone__c) >10) 
+
+
+
+)|Office_Phone__c=8376290231
+12:34:01.0 (202125345)|VALIDATION_PASS
+12:34:01.0 (202127839)|VALIDATION_RULE|03d36000000y4Yi|Other_Phone_must_be_10_digits_numeric
+12:34:01.0 (202228956)|VALIDATION_FORMULA|AND(NOT(ISBLANK(  OtherPhone )), 
+
+OR(NOT(ISNUMBER(OtherPhone)) , 
+LEN(OtherPhone) >10) 
+
+
+
+)|OtherPhone=null
+12:34:01.0 (202239129)|VALIDATION_PASS
+12:34:01.0 (202241371)|VALIDATION_RULE|03d36000000y4Yj|Phone_must_be_10_digits_and_numeric
+12:34:01.0 (202331974)|VALIDATION_FORMULA|AND(NOT(ISBLANK(  Phone)), 
+
+OR(NOT(ISNUMBER(Phone)) , 
+LEN(Phone) >10) 
+
+
+
+)|Phone=null
+12:34:01.0 (202341848)|VALIDATION_PASS
+12:34:01.0 (202344091)|VALIDATION_RULE|03dm00000002Rs2|Accounting_Profile_Should_Not_Edit_Name
+12:34:01.0 (206772241)|VALIDATION_FORMULA|AND($Profile.Name = "Accounting",
+OR(ISCHANGED(FirstName), 
+ISCHANGED(LastName), 
+ISCHANGED( MiddleName),
+ISCHANGED( Suffix)
+))|$Profile.Name=System Administrator , Suffix=null , FirstName=Chester1 , LastName=Tester1 , MiddleName=null
+12:34:01.0 (206785533)|VALIDATION_PASS
+12:34:01.0 (206788376)|VALIDATION_RULE|03d36000000xpmi|Require_First_Name
+12:34:01.0 (206885222)|VALIDATION_FORMULA|ISBLANK(FirstName )|FirstName=Chester1
+12:34:01.0 (206893709)|VALIDATION_PASS
+12:34:01.0 (207068824)|CODE_UNIT_FINISHED|Validation:Contact:new
+12:34:01.0 (207497760)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector
+12:34:01.0 (207508805)|DUPLICATE_DETECTION_BEGIN
+12:34:01.0 (207832848)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm36000000lgxn|DuplicateRuleName:Standard Contact Duplicate Rule|DmlType:INSERT
+12:34:01.0 (230280708)|DUPLICATE_DETECTION_MATCH_INVOCATION_DETAILS|EntityType:Contact|ActionTaken:Block|DuplicateRecordIds:
+12:34:01.0 (230308264)|DUPLICATE_DETECTION_MATCH_INVOCATION_SUMMARY|EntityType:Contact|NumRecordsToBeSaved:1|NumRecordsToBeSavedWithDuplicates:0|NumDuplicateRecordsFound:0
+12:34:01.0 (230448255)|DUPLICATE_DETECTION_END
+12:34:01.0 (230455481)|CODE_UNIT_FINISHED|DuplicateDetector
+12:34:01.259 (259541229)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.259 (259628099)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.259 (259640830)|VARIABLE_SCOPE_BEGIN|[1]|this|pi.LogContactChange|true|false
+12:34:01.259 (259682629)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x79d9f930
+12:34:01.287 (287403926)|CUMULATIVE_LIMIT_USAGE
+12:34:01.287 (287403926)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 7 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.287 (287403926)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (289856226)|CODE_UNIT_STARTED|[EXTERNAL]|01qm00000000r5O|mm_SSN_Validation on Contact trigger event AfterInsert|__sfdc_trigger/mm_SSN_Validation
+12:34:01.0 (289892589)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (289933752)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (289942002)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_SSN_Validation|true|false
+12:34:01.0 (289968001)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x17b7fcae
+12:34:01.0 (290006716)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (290014125)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_SSN_Validation|true|false
+12:34:01.0 (290025402)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x17b7fcae
+12:34:01.0 (290032624)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (290092595)|HEAP_ALLOCATE|[4]|Bytes:5
+12:34:01.0 (290112706)|VARIABLE_SCOPE_BEGIN|[4]|contact|Contact|true|false
+12:34:01.0 (291280397)|VARIABLE_ASSIGNMENT|[4]|contact|{"LastModifiedDate":"2018-09-21T19:34:02.000Z","AccountId":"0011800000aMYAKAA4","Email":"kelly.carroll@matson (9 more) ...","DoNotCall":false,"ContactFnameLNameLegacyID__c":"Chester1Tester1","MailingCountry":"United States","HasOptedOutOfFax":false,"Office_Phone_Formula__c":"8376290231","pi__Needs_Score_Synced__c":false,"MailingState":"Ohio","Matson_Event_Marketing_Email_Opt_Out__c":false,"OwnerId":"00518000002hPQOAA2","CreatedById":"00518000002hPQOAA2","MailingPostalCode":"45219","OtherCountry":"United States","IsDeleted":false,"IsEmailBounced":false,"Preferred_Name__c":"Chester1","OtherCountryCode":"US","FirstName":"Chester1","HasOptedOutOfEmail":false,"MailingCity":"Cincinnati","SystemModstamp":"2018-09-21T19:34:02.000Z","Full_Name__c":"Chester1 Tester1","MailingStateCode":"OH","MailingCountryCode":"US","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"pi__pardot_hard_bounced__c":false,"Office_Phone__c":"8376290231","Id":"0031800000UMFLLAA5","LastName":"Tester1","LastModifiedById":"00518000002hPQOAA2","MailingStreet":"1284 Test Ave"}|0x4677cc5a
+12:34:01.0 (291303193)|STATEMENT_EXECUTE|[4]
+12:34:01.0 (291362057)|STATEMENT_EXECUTE|[6]
+12:34:01.0 (291375629)|HEAP_ALLOCATE|[4]|Bytes:5
+12:34:01.0 (291391277)|VARIABLE_ASSIGNMENT|[4]|contact|null|
+12:34:01.291 (291400012)|CUMULATIVE_LIMIT_USAGE
+12:34:01.291 (291400012)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 7 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.291 (291400012)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (292329800)|CODE_UNIT_FINISHED|mm_SSN_Validation on Contact trigger event AfterInsert|__sfdc_trigger/mm_SSN_Validation
+12:34:01.0 (302931845)|DML_END|[29]
+12:34:01.0 (302951605)|STATEMENT_EXECUTE|[32]
+12:34:01.0 (302995701)|HEAP_ALLOCATE|[32]|Bytes:4
+12:34:01.0 (303092897)|VARIABLE_SCOPE_BEGIN|[32]|adv1|Adviser__c|true|false
+12:34:01.0 (303112007)|VARIABLE_ASSIGNMENT|[32]|adv1|{}|0x56d88bd3
+12:34:01.0 (303118543)|STATEMENT_EXECUTE|[33]
+12:34:01.0 (303203635)|VARIABLE_ASSIGNMENT|[33]|this.RecordTypeId|"01236000000yILNAA2"|0x56d88bd3
+12:34:01.0 (303215277)|STATEMENT_EXECUTE|[34]
+12:34:01.0 (303271483)|VARIABLE_ASSIGNMENT|[34]|this.Primary_Contact__c|"0031800000UMFLLAA5"|0x56d88bd3
+12:34:01.0 (303279592)|STATEMENT_EXECUTE|[35]
+12:34:01.0 (303285301)|HEAP_ALLOCATE|[35]|Bytes:15
+12:34:01.0 (303319987)|VARIABLE_ASSIGNMENT|[35]|this.Status__c|"Active Prospect"|0x56d88bd3
+12:34:01.0 (303326834)|STATEMENT_EXECUTE|[36]
+12:34:01.0 (303378582)|HEAP_ALLOCATE|[36]|Bytes:20
+12:34:01.0 (303430411)|VARIABLE_ASSIGNMENT|[36]|this.Adviser_Coach__c|"00536000001OWzXAAW"|0x56d88bd3
+12:34:01.0 (303436928)|STATEMENT_EXECUTE|[37]
+12:34:01.0 (303476986)|HEAP_ALLOCATE|[37]|Bytes:4
+12:34:01.0 (303500796)|HEAP_ALLOCATE|[37]|Bytes:56
+12:34:01.0 (303538114)|VARIABLE_ASSIGNMENT|[37]|this.Inventory_Date__c|"2018-09-21T00:00:00.000Z"|0x56d88bd3
+12:34:01.0 (303544264)|STATEMENT_EXECUTE|[38]
+12:34:01.0 (303548121)|HEAP_ALLOCATE|[38]|Bytes:6
+12:34:01.0 (303586088)|VARIABLE_ASSIGNMENT|[38]|this.X3_Biggest_Money_Problems__c|"stufff"|0x56d88bd3
+12:34:01.0 (303591872)|STATEMENT_EXECUTE|[39]
+12:34:01.0 (303595069)|HEAP_ALLOCATE|[39]|Bytes:5
+12:34:01.0 (303614379)|HEAP_ALLOCATE|[39]|Bytes:28
+12:34:01.0 (303638698)|VARIABLE_ASSIGNMENT|[39]|this.Pain_Money_Total__c|10.00|0x56d88bd3
+12:34:01.0 (303645854)|STATEMENT_EXECUTE|[40]
+12:34:01.0 (303664511)|HEAP_ALLOCATE|[40]|Bytes:8
+12:34:01.0 (303674498)|DML_BEGIN|[40]|Op:Insert|Type:Adviser__c|Rows:1
+12:34:01.0 (303706560)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (311185025)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus on Adviser trigger event BeforeInsert|__sfdc_trigger/mm_AdviserPreventInventoryCompletedStatus
+12:34:01.0 (311225811)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (311317237)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:17
+12:34:01.0 (311345983)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+12:34:01.0 (311353331)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserPreventInventoryCompletedStatus|true|false
+12:34:01.0 (311388284)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x1251baa4
+12:34:01.0 (311451516)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+12:34:01.0 (311463714)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserPreventInventoryCompletedStatus|true|false
+12:34:01.0 (311479665)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x1251baa4
+12:34:01.0 (311487634)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (311489760)|STATEMENT_EXECUTE|[2]
+12:34:01.0 (311503851)|HEAP_ALLOCATE|[2]|Bytes:4
+12:34:01.0 (311566318)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (311579311)|VARIABLE_ASSIGNMENT|[2]|this.ADVRS|[]|0x1251baa4
+12:34:01.0 (311586517)|STATEMENT_EXECUTE|[5]
+12:34:01.0 (311590195)|HEAP_ALLOCATE|[5]|Bytes:122
+12:34:01.0 (311606870)|VARIABLE_ASSIGNMENT|[5]|this.qry|"Select Id From Conta (102 more) ..."|0x1251baa4
+12:34:01.0 (311613548)|STATEMENT_EXECUTE|[7]
+12:34:01.0 (311891748)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|Select Id From Contact Where MailingStreet = NULL OR MailingCity = NULL OR MailingState = NULL OR MailingPostalCode = NULL
+12:34:01.0 (315483192)|SOQL_EXECUTE_END|[7]|Rows:0
+12:34:01.0 (315505551)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (315516975)|HEAP_ALLOCATE|[7]|Bytes:0
+12:34:01.0 (315545144)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (315574518)|VARIABLE_ASSIGNMENT|[7]|this.results|[]|0x1251baa4
+12:34:01.0 (315592846)|STATEMENT_EXECUTE|[9]
+12:34:01.0 (315612531)|HEAP_ALLOCATE|[9]|Bytes:4
+12:34:01.0 (315681933)|HEAP_ALLOCATE|[9]|Bytes:4
+12:34:01.0 (315703304)|VARIABLE_ASSIGNMENT|[9]|this.resultIds|[]|0x1251baa4
+12:34:01.0 (315709821)|STATEMENT_EXECUTE|[13]
+12:34:01.0 (315723294)|HEAP_ALLOCATE|[13]|Bytes:4
+12:34:01.0 (315899339)|SOQL_EXECUTE_BEGIN|[13]|Aggregations:0|SELECT Id, Name FROM RecordType WHERE (Name = 'Adviser Prospect' AND SobjectType = 'Adviser__c')
+12:34:01.0 (318101252)|SOQL_EXECUTE_END|[13]|Rows:1
+12:34:01.0 (318120418)|HEAP_ALLOCATE|[13]|Bytes:8
+12:34:01.0 (318135324)|HEAP_ALLOCATE|[13]|Bytes:53
+12:34:01.0 (318161891)|HEAP_ALLOCATE|[13]|Bytes:8
+12:34:01.0 (318186399)|HEAP_ALLOCATE|[13]|Bytes:12
+12:34:01.0 (318221402)|VARIABLE_ASSIGNMENT|[13]|this.adviserProspectRecordType|{"Id":"01236000000yILNAA2","Name":"Adviser Prospect"}|0x1251baa4
+12:34:01.0 (318413314)|HEAP_ALLOCATE|[15]|Bytes:5
+12:34:01.0 (318433400)|HEAP_ALLOCATE|[15]|Bytes:4
+12:34:01.0 (318442809)|VARIABLE_SCOPE_BEGIN|[15]|adviser|Adviser__c|true|false
+12:34:01.0 (327685437)|VARIABLE_ASSIGNMENT|[15]|adviser|{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","IsSplitName__c":false,"Office_Phone__c":"8376290231","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}|0x8b8b06e
+12:34:01.0 (327705560)|STATEMENT_EXECUTE|[15]
+12:34:01.0 (327711775)|HEAP_ALLOCATE|[19]|Bytes:19
+12:34:01.0 (327741236)|METHOD_ENTRY|[19]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (327763944)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (327776348)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Inventory Scheduled"
+12:34:01.0 (327781407)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (328388224)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","IsSplitName__c":false,"Office_Phone__c":"8376290231","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}|0x8b8b06e
+12:34:01.0 (328417398)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (328419747)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (328461253)|METHOD_EXIT|[19]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (328475465)|METHOD_ENTRY|[24]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (328489591)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (328502054)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Inventory Scheduled"
+12:34:01.0 (328506284)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (329080631)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","IsSplitName__c":false,"Office_Phone__c":"8376290231","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}|0x8b8b06e
+12:34:01.0 (329102575)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (329104523)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (329123377)|METHOD_EXIT|[24]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (329134060)|HEAP_ALLOCATE|[29]|Bytes:19
+12:34:01.0 (329143835)|METHOD_ENTRY|[29]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (329157683)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (329168712)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Inventory Completed"
+12:34:01.0 (329172787)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (329748034)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","IsSplitName__c":false,"Office_Phone__c":"8376290231","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}|0x8b8b06e
+12:34:01.0 (329769655)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (329771514)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (329789138)|METHOD_EXIT|[29]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (329798744)|HEAP_ALLOCATE|[34]|Bytes:28
+12:34:01.0 (329808315)|METHOD_ENTRY|[34]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (329821615)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (329833940)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Registered for EFT S (8 more) ..."
+12:34:01.0 (329837896)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (330430955)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","IsSplitName__c":false,"Office_Phone__c":"8376290231","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}|0x8b8b06e
+12:34:01.0 (330453344)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (330455304)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (330473359)|METHOD_EXIT|[34]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (330483751)|HEAP_ALLOCATE|[39]|Bytes:22
+12:34:01.0 (330498604)|METHOD_ENTRY|[39]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (330512084)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (330524342)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"EFT Session 1 Attend (2 more) ..."
+12:34:01.0 (330528755)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (331097895)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","IsSplitName__c":false,"Office_Phone__c":"8376290231","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}|0x8b8b06e
+12:34:01.0 (331119802)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (331121887)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (331139612)|METHOD_EXIT|[39]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (331148624)|HEAP_ALLOCATE|[44]|Bytes:16
+12:34:01.0 (331158120)|METHOD_ENTRY|[44]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (331170887)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (331181990)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Contracts Signed"
+12:34:01.0 (331186249)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (331746718)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","IsSplitName__c":false,"Office_Phone__c":"8376290231","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}|0x8b8b06e
+12:34:01.0 (331767207)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (331769199)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (331787007)|METHOD_EXIT|[44]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (331795420)|STATEMENT_EXECUTE|[19]
+12:34:01.0 (331813635)|HEAP_ALLOCATE|[15]|Bytes:5
+12:34:01.0 (331829007)|VARIABLE_ASSIGNMENT|[15]|adviser|null|
+12:34:01.331 (331841254)|CUMULATIVE_LIMIT_USAGE
+12:34:01.331 (331841254)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 5 out of 100
+  Number of query rows: 8 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.331 (331841254)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (333103580)|CODE_UNIT_FINISHED|mm_AdviserPreventInventoryCompletedStatus on Adviser trigger event BeforeInsert|__sfdc_trigger/mm_AdviserPreventInventoryCompletedStatus
+12:34:01.0 (334756460)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuW|mm_AdviserUpdateDuplicateCheckADVCONHidden on Adviser trigger event BeforeInsert|__sfdc_trigger/mm_AdviserUpdateDuplicateCheckADVCONHidden
+12:34:01.0 (334796646)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (334837495)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (334846917)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserUpdateDuplicateCheckADVCONHidden|true|false
+12:34:01.0 (334868750)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x614dca43
+12:34:01.0 (334913297)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (334920188)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserUpdateDuplicateCheckADVCONHidden|true|false
+12:34:01.0 (334931672)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x614dca43
+12:34:01.0 (334938715)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (335004807)|HEAP_ALLOCATE|[2]|Bytes:5
+12:34:01.0 (335021080)|HEAP_ALLOCATE|[2]|Bytes:4
+12:34:01.0 (335029144)|VARIABLE_SCOPE_BEGIN|[2]|obj|Adviser__c|true|false
+12:34:01.0 (335666219)|VARIABLE_ASSIGNMENT|[2]|obj|{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","IsSplitName__c":false,"Office_Phone__c":"8376290231","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}|0x8b8b06e
+12:34:01.0 (335683694)|STATEMENT_EXECUTE|[2]
+12:34:01.0 (335685858)|STATEMENT_EXECUTE|[4]
+12:34:01.0 (335713338)|HEAP_ALLOCATE|[4]|Bytes:18
+12:34:01.0 (336267336)|VARIABLE_ASSIGNMENT|[4]|this.DuplicateCheckADVCONHidden__c|"0031800000UMFLLAA5"|0x8b8b06e
+12:34:01.0 (336291745)|HEAP_ALLOCATE|[2]|Bytes:5
+12:34:01.0 (336306797)|VARIABLE_ASSIGNMENT|[2]|obj|null|
+12:34:01.336 (336314938)|CUMULATIVE_LIMIT_USAGE
+12:34:01.336 (336314938)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 5 out of 100
+  Number of query rows: 8 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.336 (336314938)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (337228938)|CODE_UNIT_FINISHED|mm_AdviserUpdateDuplicateCheckADVCONHidden on Adviser trigger event BeforeInsert|__sfdc_trigger/mm_AdviserUpdateDuplicateCheckADVCONHidden
+12:34:01.0 (352167866)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Adviser:new
+12:34:01.0 (352181917)|VALIDATION_RULE|03d36000000nEBK|Office_Id_must_be_numeric
+12:34:01.0 (352302049)|VALIDATION_FORMULA|NOT(ISBLANK(Office_Id__c))  && NOT(ISNUMBER( Office_Id__c ))|Office_Id__c=null
+12:34:01.0 (352311385)|VALIDATION_PASS
+12:34:01.0 (352314743)|VALIDATION_RULE|03d36000000y3Jg|Address_Required_for_Active_Advisers
+12:34:01.0 (352543902)|VALIDATION_FORMULA|AND(ISBLANK( Primary_Contact__r.MailingStreet ),  RecordType.Name == "Adviser",  NOT( ISBLANK( Primary_Contact__c )))|Primary_Contact__r.MailingStreet=1284 Test Ave , RecordType.Name=Adviser Prospect , Primary_Contact__c=0031800000UMFLL
+12:34:01.0 (352555170)|VALIDATION_PASS
+12:34:01.0 (352558072)|VALIDATION_RULE|03d36000000y3Jh|Require_Designation
+12:34:01.0 (352729704)|VALIDATION_FORMULA|AND(ISPICKVAL( Status__c , "Active Adviser"),ISBLANK(TEXT( Designation__c)))|Designation__c=null , Status__c=Active Prospect
+12:34:01.0 (352739732)|VALIDATION_PASS
+12:34:01.0 (352742220)|VALIDATION_RULE|03d36000000y3Ji|Require_Firm_Id
+12:34:01.0 (352852237)|VALIDATION_FORMULA|AND( ISPICKVAL(Status__c , "Active Adviser") , ISBLANK( Firm_ID__c ) )|Status__c=Active Prospect , Firm_ID__c=null
+12:34:01.0 (352861326)|VALIDATION_PASS
+12:34:01.0 (352863854)|VALIDATION_RULE|03d36000000y3Jk|Require_Service_Team
+12:34:01.0 (352987687)|VALIDATION_FORMULA|AND(ISPICKVAL( Status__c , "Active Adviser"),ISBLANK(TEXT( Service_Team__c)))|Status__c=Active Prospect , Service_Team__c=null
+12:34:01.0 (352999175)|VALIDATION_PASS
+12:34:01.0 (353118962)|CODE_UNIT_FINISHED|Validation:Adviser:new
+12:34:01.0 (353531314)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector
+12:34:01.0 (353540095)|DUPLICATE_DETECTION_BEGIN
+12:34:01.0 (353797453)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm36000002NLjA|DuplicateRuleName:Prevent Multiple Advisers on a Contact|DmlType:INSERT
+12:34:01.0 (364147047)|DUPLICATE_RULE_FILTER|[User : Profile not equal to System Administrator]
+12:34:01.0 (364193867)|DUPLICATE_RULE_FILTER_VALUE|00e36000000wUkN
+12:34:01.0 (364206293)|DUPLICATE_RULE_FILTER_RESULT|false
+12:34:01.0 (364273810)|DUPLICATE_DETECTION_END
+12:34:01.0 (364279822)|CODE_UNIT_FINISHED|DuplicateDetector
+12:34:01.0 (386098012)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I36000002qz04
+12:34:01.0 (389738938)|WF_RULE_EVAL_BEGIN|Workflow
+12:34:01.0 (389758455)|WF_CRITERIA_BEGIN|[Adviser: ADV-101708 a0l18000001NTNC]|Adviser301m0000000A7dA|01Qm00000009izZ|ON_ALL_CHANGES|0
+12:34:01.0 (389825964)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+12:34:01.0 (389832733)|WF_CRITERIA_END|true
+12:34:01.0 (390483849)|WF_CRITERIA_BEGIN|[Adviser: ADV-101708 a0l18000001NTNC]|Populate Adviser Primary Contact Name hidden|01Q360000006Ley|ON_ALL_CHANGES|0
+12:34:01.0 (390827815)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]{!ID:00N3600000RWH6w} <> {!ID:00N3600000RWH6x}|Values:Primary_Contact_Name_Hidden__c=null, Primary_Contact_Name__c=Chester1 Tester1
+12:34:01.0 (390837484)|WF_CRITERIA_END|true
+12:34:01.0 (390854520)|WF_SPOOL_ACTION_BEGIN|Workflow
+12:34:01.0 (391084958)|WF_FIELD_UPDATE|[Adviser: ADV-101708 a0l18000001NTNC]|Field:Adviser: Primary Contact Name Hidden|Value:Chester1 Tester1|Id=04Y360000005lbJ|CurrentRule:Populate Adviser Primary Contact Name hidden (Id=01Q360000006Ley)
+12:34:01.0 (391116934)|WF_ACTION| Field Update: 1; Flow Trigger: 1;
+12:34:01.0 (391121950)|WF_RULE_EVAL_END
+12:34:01.0 (392644484)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuR|ChangeRecordTypeOnConvertQuickAction on Adviser trigger event BeforeUpdate|__sfdc_trigger/ChangeRecordTypeOnConvertQuickAction
+12:34:01.0 (392688983)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (392722657)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (392808583)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (392819253)|VARIABLE_SCOPE_BEGIN|[1]|this|ChangeRecordTypeOnConvertQuickAction|true|false
+12:34:01.0 (392858998)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5752a97b
+12:34:01.0 (392911765)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (392919642)|VARIABLE_SCOPE_BEGIN|[1]|this|ChangeRecordTypeOnConvertQuickAction|true|false
+12:34:01.0 (392932980)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5752a97b
+12:34:01.0 (392941181)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (392943234)|STATEMENT_EXECUTE|[2]
+12:34:01.0 (392948691)|HEAP_ALLOCATE|[2]|Bytes:87
+12:34:01.0 (392970741)|HEAP_ALLOCATE|[2]|Bytes:4
+12:34:01.0 (393229767)|SOQL_EXECUTE_BEGIN|[2]|Aggregations:0|SELECT Id, Name FROM RecordType WHERE (Name = 'Adviser' AND SobjectType = 'Adviser__c')
+12:34:01.0 (395523135)|SOQL_EXECUTE_END|[2]|Rows:1
+12:34:01.0 (395543788)|HEAP_ALLOCATE|[2]|Bytes:8
+12:34:01.0 (395560180)|HEAP_ALLOCATE|[2]|Bytes:44
+12:34:01.0 (395592618)|HEAP_ALLOCATE|[2]|Bytes:8
+12:34:01.0 (395619610)|HEAP_ALLOCATE|[2]|Bytes:12
+12:34:01.0 (395655379)|VARIABLE_ASSIGNMENT|[2]|this.RT|{"Id":"01236000000yILMAA2","Name":"Adviser"}|0x5752a97b
+12:34:01.0 (395724576)|HEAP_ALLOCATE|[3]|Bytes:5
+12:34:01.0 (395742895)|HEAP_ALLOCATE|[3]|Bytes:4
+12:34:01.0 (395752222)|VARIABLE_SCOPE_BEGIN|[3]|a|Adviser__c|true|false
+12:34:01.0 (397153488)|VARIABLE_ASSIGNMENT|[3]|a|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (397179748)|STATEMENT_EXECUTE|[3]
+12:34:01.0 (397254592)|HEAP_ALLOCATE|[4]|Bytes:29
+12:34:01.0 (397261308)|STATEMENT_EXECUTE|[4]
+12:34:01.0 (397275083)|HEAP_ALLOCATE|[3]|Bytes:5
+12:34:01.0 (397289372)|VARIABLE_ASSIGNMENT|[3]|a|null|
+12:34:01.397 (397298955)|CUMULATIVE_LIMIT_USAGE
+12:34:01.397 (397298955)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 6 out of 100
+  Number of query rows: 9 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.397 (397298955)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (398230738)|CODE_UNIT_FINISHED|ChangeRecordTypeOnConvertQuickAction on Adviser trigger event BeforeUpdate|__sfdc_trigger/ChangeRecordTypeOnConvertQuickAction
+12:34:01.0 (399477187)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuS|QuickAction on Adviser trigger event BeforeUpdate|__sfdc_trigger/QuickAction
+12:34:01.0 (399504554)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (399511044)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (399570288)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (399577928)|VARIABLE_SCOPE_BEGIN|[1]|this|QuickAction|true|false
+12:34:01.0 (399600816)|VARIABLE_ASSIGNMENT|[1]|this|{}|0xbef7c2d
+12:34:01.0 (399644256)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (399651438)|VARIABLE_SCOPE_BEGIN|[1]|this|QuickAction|true|false
+12:34:01.0 (399664041)|VARIABLE_ASSIGNMENT|[1]|this|{}|0xbef7c2d
+12:34:01.0 (399670637)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (399725140)|HEAP_ALLOCATE|[4]|Bytes:5
+12:34:01.0 (399739102)|HEAP_ALLOCATE|[4]|Bytes:4
+12:34:01.0 (399746827)|VARIABLE_SCOPE_BEGIN|[4]|a|Adviser__c|true|false
+12:34:01.0 (400258519)|VARIABLE_ASSIGNMENT|[4]|a|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (400281108)|STATEMENT_EXECUTE|[5]
+12:34:01.0 (400318617)|STATEMENT_EXECUTE|[6]
+12:34:01.0 (400333745)|HEAP_ALLOCATE|[4]|Bytes:5
+12:34:01.0 (400348662)|VARIABLE_ASSIGNMENT|[4]|a|null|
+12:34:01.400 (400356692)|CUMULATIVE_LIMIT_USAGE
+12:34:01.400 (400356692)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 6 out of 100
+  Number of query rows: 9 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.400 (400356692)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (401231926)|CODE_UNIT_FINISHED|QuickAction on Adviser trigger event BeforeUpdate|__sfdc_trigger/QuickAction
+12:34:01.0 (402420284)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus on Adviser trigger event BeforeUpdate|__sfdc_trigger/mm_AdviserPreventInventoryCompletedStatus
+12:34:01.0 (402447995)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (402454325)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (402484849)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+12:34:01.0 (402491153)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserPreventInventoryCompletedStatus|true|false
+12:34:01.0 (402514562)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x70ba4ddf
+12:34:01.0 (402546430)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+12:34:01.0 (402552691)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserPreventInventoryCompletedStatus|true|false
+12:34:01.0 (402566887)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x70ba4ddf
+12:34:01.0 (402574225)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (402576118)|STATEMENT_EXECUTE|[2]
+12:34:01.0 (402588088)|HEAP_ALLOCATE|[2]|Bytes:4
+12:34:01.0 (402629454)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (402640408)|VARIABLE_ASSIGNMENT|[2]|this.ADVRS|[]|0x70ba4ddf
+12:34:01.0 (402645523)|STATEMENT_EXECUTE|[5]
+12:34:01.0 (402657967)|VARIABLE_ASSIGNMENT|[5]|this.qry|"Select Id From Conta (102 more) ..."|0x70ba4ddf
+12:34:01.0 (402663387)|STATEMENT_EXECUTE|[7]
+12:34:01.0 (402842778)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|Select Id From Contact Where MailingStreet = NULL OR MailingCity = NULL OR MailingState = NULL OR MailingPostalCode = NULL
+12:34:01.0 (405160978)|SOQL_EXECUTE_END|[7]|Rows:0
+12:34:01.0 (405181796)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (405191455)|HEAP_ALLOCATE|[7]|Bytes:0
+12:34:01.0 (405222483)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (405247283)|VARIABLE_ASSIGNMENT|[7]|this.results|[]|0x70ba4ddf
+12:34:01.0 (405253708)|STATEMENT_EXECUTE|[9]
+12:34:01.0 (405267518)|HEAP_ALLOCATE|[9]|Bytes:4
+12:34:01.0 (405305377)|HEAP_ALLOCATE|[9]|Bytes:4
+12:34:01.0 (405322836)|VARIABLE_ASSIGNMENT|[9]|this.resultIds|[]|0x70ba4ddf
+12:34:01.0 (405328643)|STATEMENT_EXECUTE|[13]
+12:34:01.0 (405337785)|HEAP_ALLOCATE|[13]|Bytes:4
+12:34:01.0 (405481389)|SOQL_EXECUTE_BEGIN|[13]|Aggregations:0|SELECT Id, Name FROM RecordType WHERE (Name = 'Adviser Prospect' AND SobjectType = 'Adviser__c')
+12:34:01.0 (407243508)|SOQL_EXECUTE_END|[13]|Rows:1
+12:34:01.0 (407262497)|HEAP_ALLOCATE|[13]|Bytes:8
+12:34:01.0 (407274626)|HEAP_ALLOCATE|[13]|Bytes:53
+12:34:01.0 (407298282)|HEAP_ALLOCATE|[13]|Bytes:8
+12:34:01.0 (407315724)|HEAP_ALLOCATE|[13]|Bytes:12
+12:34:01.0 (407339068)|VARIABLE_ASSIGNMENT|[13]|this.adviserProspectRecordType|{"Id":"01236000000yILNAA2","Name":"Adviser Prospect"}|0x70ba4ddf
+12:34:01.0 (407379764)|HEAP_ALLOCATE|[15]|Bytes:5
+12:34:01.0 (407392354)|HEAP_ALLOCATE|[15]|Bytes:4
+12:34:01.0 (407400122)|VARIABLE_SCOPE_BEGIN|[15]|adviser|Adviser__c|true|false
+12:34:01.0 (407922192)|VARIABLE_ASSIGNMENT|[15]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (407943521)|STATEMENT_EXECUTE|[15]
+12:34:01.0 (407955950)|METHOD_ENTRY|[19]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (407964750)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (407975710)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Inventory Scheduled"
+12:34:01.0 (407979949)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (408438059)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (408469687)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (408471785)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (408493204)|METHOD_EXIT|[19]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (408506815)|METHOD_ENTRY|[24]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (408513177)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (408523632)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Inventory Scheduled"
+12:34:01.0 (408527464)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (408990515)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (409015708)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (409018342)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (409035983)|METHOD_EXIT|[24]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (409048660)|METHOD_ENTRY|[29]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (409055957)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (409066491)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Inventory Completed"
+12:34:01.0 (409070735)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (409534658)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (409560425)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (409562356)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (409579939)|METHOD_EXIT|[29]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (409592377)|METHOD_ENTRY|[34]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (409598681)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (409609976)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Registered for EFT S (8 more) ..."
+12:34:01.0 (409614532)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (410062156)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (410087473)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (410089390)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (410106176)|METHOD_EXIT|[34]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (410118062)|METHOD_ENTRY|[39]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (410124948)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (410136329)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"EFT Session 1 Attend (2 more) ..."
+12:34:01.0 (410140814)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (410596224)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (410622365)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (410624296)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (410641073)|METHOD_EXIT|[39]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (410652913)|METHOD_ENTRY|[44]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (410659931)|VARIABLE_SCOPE_BEGIN|[70]|salesStatus|String|false|false
+12:34:01.0 (410670339)|VARIABLE_ASSIGNMENT|[70]|salesStatus|"Contracts Signed"
+12:34:01.0 (410674563)|VARIABLE_SCOPE_BEGIN|[70]|adviser|Adviser__c|true|false
+12:34:01.0 (411115711)|VARIABLE_ASSIGNMENT|[70]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (411141058)|STATEMENT_EXECUTE|[70]
+12:34:01.0 (411142801)|STATEMENT_EXECUTE|[72]
+12:34:01.0 (411159313)|METHOD_EXIT|[44]|01q36000001RnuU|mm_AdviserPreventInventoryCompletedStatus.isSalesStatus(String, Adviser__c)
+12:34:01.0 (411167152)|STATEMENT_EXECUTE|[19]
+12:34:01.0 (411184352)|HEAP_ALLOCATE|[15]|Bytes:5
+12:34:01.0 (411198391)|VARIABLE_ASSIGNMENT|[15]|adviser|null|
+12:34:01.411 (411206269)|CUMULATIVE_LIMIT_USAGE
+12:34:01.411 (411206269)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 8 out of 100
+  Number of query rows: 10 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.411 (411206269)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (412082983)|CODE_UNIT_FINISHED|mm_AdviserPreventInventoryCompletedStatus on Adviser trigger event BeforeUpdate|__sfdc_trigger/mm_AdviserPreventInventoryCompletedStatus
+12:34:01.0 (423881211)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuV|mm_AdviserPreventSalespathRegresion on Adviser trigger event BeforeUpdate|__sfdc_trigger/mm_AdviserPreventSalespathRegresion
+12:34:01.0 (423914315)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (423922736)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (424015906)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:16
+12:34:01.0 (424027009)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserPreventSalespathRegresion|true|false
+12:34:01.0 (424066946)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5de8ffaf
+12:34:01.0 (424115430)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:16
+12:34:01.0 (424341579)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserPreventSalespathRegresion|true|false
+12:34:01.0 (424361184)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5de8ffaf
+12:34:01.0 (424368441)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (424370496)|STATEMENT_EXECUTE|[2]
+12:34:01.0 (424382938)|HEAP_ALLOCATE|[2]|Bytes:4
+12:34:01.0 (424430902)|VARIABLE_ASSIGNMENT|[2]|this.adviserOldValue|{}|0x5de8ffaf
+12:34:01.0 (424436996)|STATEMENT_EXECUTE|[3]
+12:34:01.0 (424484974)|HEAP_ALLOCATE|[3]|Bytes:89
+12:34:01.0 (424499205)|SYSTEM_METHOD_ENTRY|[1]|UserInfo.UserInfo()
+12:34:01.0 (424503547)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (424510175)|SYSTEM_METHOD_EXIT|[1]|UserInfo
+12:34:01.0 (424521705)|METHOD_ENTRY|[3]||System.UserInfo.getProfileId()
+12:34:01.0 (424572973)|METHOD_EXIT|[3]||System.UserInfo.getProfileId()
+12:34:01.0 (424585713)|HEAP_ALLOCATE|[3]|Bytes:4
+12:34:01.0 (424686682)|VARIABLE_ASSIGNMENT|[3]|this.profileId|"00e36000000wUkNAAU"|0x5de8ffaf
+12:34:01.0 (424693314)|STATEMENT_EXECUTE|[4]
+12:34:01.0 (424696916)|HEAP_ALLOCATE|[4]|Bytes:48
+12:34:01.0 (424710826)|HEAP_ALLOCATE|[4]|Bytes:4
+12:34:01.0 (424718019)|HEAP_ALLOCATE|[4]|Bytes:7
+12:34:01.0 (424887837)|SOQL_EXECUTE_BEGIN|[4]|Aggregations:0|SELECT Id, Name FROM Profile WHERE Id = :tmpVar1
+12:34:01.0 (426566338)|SOQL_EXECUTE_END|[4]|Rows:1
+12:34:01.0 (426586603)|HEAP_ALLOCATE|[4]|Bytes:8
+12:34:01.0 (426600655)|HEAP_ALLOCATE|[4]|Bytes:57
+12:34:01.0 (426651460)|HEAP_ALLOCATE|[4]|Bytes:8
+12:34:01.0 (426667572)|HEAP_ALLOCATE|[4]|Bytes:33
+12:34:01.0 (426710398)|HEAP_ALLOCATE|[4]|Bytes:12
+12:34:01.0 (426749833)|VARIABLE_ASSIGNMENT|[4]|this.profileName|"System Administrator"|0x5de8ffaf
+12:34:01.0 (426756744)|STATEMENT_EXECUTE|[5]
+12:34:01.0 (428373580)|VARIABLE_ASSIGNMENT|[5]|this.adviserOldValue|{"a0l18000001NTNCAA4":{"Deposit_Notification__c":false,"Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","Contact_Last_Name__c":"Tester1"}}|0x5de8ffaf
+12:34:01.0 (428470409)|HEAP_ALLOCATE|[6]|Bytes:5
+12:34:01.0 (428489764)|HEAP_ALLOCATE|[6]|Bytes:4
+12:34:01.0 (428501071)|VARIABLE_SCOPE_BEGIN|[6]|adviser|Adviser__c|true|false
+12:34:01.0 (429250394)|VARIABLE_ASSIGNMENT|[6]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (429284496)|STATEMENT_EXECUTE|[7]
+12:34:01.0 (429328384)|HEAP_ALLOCATE|[27]|Bytes:3
+12:34:01.0 (429614656)|STATEMENT_EXECUTE|[8]
+12:34:01.0 (429631799)|HEAP_ALLOCATE|[6]|Bytes:5
+12:34:01.0 (429654091)|VARIABLE_ASSIGNMENT|[6]|adviser|null|
+12:34:01.429 (429667479)|CUMULATIVE_LIMIT_USAGE
+12:34:01.429 (429667479)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 100
+  Number of query rows: 11 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.429 (429667479)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (430640225)|CODE_UNIT_FINISHED|mm_AdviserPreventSalespathRegresion on Adviser trigger event BeforeUpdate|__sfdc_trigger/mm_AdviserPreventSalespathRegresion
+12:34:01.0 (431954552)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuW|mm_AdviserUpdateDuplicateCheckADVCONHidden on Adviser trigger event BeforeUpdate|__sfdc_trigger/mm_AdviserUpdateDuplicateCheckADVCONHidden
+12:34:01.0 (431986543)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (431995834)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (432033293)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (432042743)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserUpdateDuplicateCheckADVCONHidden|true|false
+12:34:01.0 (432062609)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x54b07b9e
+12:34:01.0 (432107176)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (432115776)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_AdviserUpdateDuplicateCheckADVCONHidden|true|false
+12:34:01.0 (432132573)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x54b07b9e
+12:34:01.0 (432142074)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (432195692)|HEAP_ALLOCATE|[2]|Bytes:5
+12:34:01.0 (432221267)|HEAP_ALLOCATE|[2]|Bytes:4
+12:34:01.0 (432233813)|VARIABLE_SCOPE_BEGIN|[2]|obj|Adviser__c|true|false
+12:34:01.0 (432956207)|VARIABLE_ASSIGNMENT|[2]|obj|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x5d078b3b
+12:34:01.0 (432985206)|STATEMENT_EXECUTE|[2]
+12:34:01.0 (432987811)|STATEMENT_EXECUTE|[4]
+12:34:01.0 (433003865)|HEAP_ALLOCATE|[4]|Bytes:18
+12:34:01.0 (433728818)|VARIABLE_ASSIGNMENT|[4]|this.DuplicateCheckADVCONHidden__c|"0031800000UMFLLAA5"|0x5d078b3b
+12:34:01.0 (433758768)|HEAP_ALLOCATE|[2]|Bytes:5
+12:34:01.0 (433780335)|VARIABLE_ASSIGNMENT|[2]|obj|null|
+12:34:01.433 (433792964)|CUMULATIVE_LIMIT_USAGE
+12:34:01.433 (433792964)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 100
+  Number of query rows: 11 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.433 (433792964)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (434790181)|CODE_UNIT_FINISHED|mm_AdviserUpdateDuplicateCheckADVCONHidden on Adviser trigger event BeforeUpdate|__sfdc_trigger/mm_AdviserUpdateDuplicateCheckADVCONHidden
+12:34:01.0 (449037903)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuZ|mm_SalesStatusSetToReg on Adviser trigger event AfterUpdate|__sfdc_trigger/mm_SalesStatusSetToReg
+12:34:01.0 (449073025)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (449100396)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (449195347)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+12:34:01.0 (449282796)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+12:34:01.0 (449293100)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_SalesStatusSetToReg|true|false
+12:34:01.0 (449335848)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x52c654dd
+12:34:01.0 (449409519)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+12:34:01.0 (449418909)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_SalesStatusSetToReg|true|false
+12:34:01.0 (449440352)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x52c654dd
+12:34:01.0 (449450082)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (449838125)|VARIABLE_SCOPE_BEGIN|[18]|mm_CurrentUser.Name|String|false|true
+12:34:01.0 (449851770)|VARIABLE_SCOPE_BEGIN|[5]|mm_CurrentUser.isServiceUser|Boolean|false|true
+12:34:01.0 (449865967)|VARIABLE_SCOPE_BEGIN|[3]|mm_CurrentUser.serviceUserProfiles|Set<String>|true|true
+12:34:01.0 (449885160)|HEAP_ALLOCATE|[3]|Bytes:124
+12:34:01.0 (449893575)|HEAP_ALLOCATE|[3]|Bytes:4
+12:34:01.0 (449911903)|METHOD_ENTRY|[1]|01p3600000JUSWB|mm_CurrentUser.mm_CurrentUser()
+12:34:01.0 (449919274)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (449923141)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (449925315)|STATEMENT_EXECUTE|[3]
+12:34:01.0 (449940771)|HEAP_ALLOCATE|[3]|Bytes:4
+12:34:01.0 (449985155)|HEAP_ALLOCATE|[3]|Bytes:18
+12:34:01.0 (450008429)|HEAP_ALLOCATE|[3]|Bytes:12
+12:34:01.0 (450064274)|VARIABLE_ASSIGNMENT|[3]|mm_CurrentUser.serviceUserProfiles|["Service Super User","Service User"]|0x709246dc
+12:34:01.0 (450078391)|METHOD_EXIT|[1]|mm_CurrentUser
+12:34:01.0 (450104442)|STATEMENT_EXECUTE|[6]
+12:34:01.0 (450107164)|STATEMENT_EXECUTE|[7]
+12:34:01.0 (450113124)|VARIABLE_SCOPE_BEGIN|[7]|profileName|String|false|false
+12:34:01.0 (450129590)|VARIABLE_ASSIGNMENT|[7]|profileName|""
+12:34:01.0 (450137129)|STATEMENT_EXECUTE|[8]
+12:34:01.0 (450141888)|HEAP_ALLOCATE|[8]|Bytes:44
+12:34:01.0 (450160216)|HEAP_ALLOCATE|[8]|Bytes:4
+12:34:01.0 (450177402)|METHOD_ENTRY|[8]||System.UserInfo.getProfileId()
+12:34:01.0 (450229209)|METHOD_EXIT|[8]||System.UserInfo.getProfileId()
+12:34:01.0 (450440643)|SOQL_EXECUTE_BEGIN|[8]|Aggregations:0|SELECT Name FROM Profile WHERE Id = :tmpVar1
+12:34:01.0 (452439232)|SOQL_EXECUTE_END|[8]|Rows:1
+12:34:01.0 (452462377)|HEAP_ALLOCATE|[8]|Bytes:8
+12:34:01.0 (452481116)|HEAP_ALLOCATE|[8]|Bytes:57
+12:34:01.0 (452509164)|HEAP_ALLOCATE|[8]|Bytes:8
+12:34:01.0 (452529294)|HEAP_ALLOCATE|[8]|Bytes:12
+12:34:01.0 (452536382)|VARIABLE_SCOPE_BEGIN|[8]|profile|Profile|true|false
+12:34:01.0 (452557932)|VARIABLE_ASSIGNMENT|[8]|profile|{"Name":"System Administrator","Id":"00e36000000wUkNAAU"}|0x22743f64
+12:34:01.0 (452564893)|STATEMENT_EXECUTE|[10]
+12:34:01.0 (452566694)|STATEMENT_EXECUTE|[11]
+12:34:01.0 (452596935)|VARIABLE_ASSIGNMENT|[11]|profileName|"System Administrator"
+12:34:01.0 (452602259)|STATEMENT_EXECUTE|[14]
+12:34:01.0 (452645241)|STATEMENT_EXECUTE|[3]
+12:34:01.0 (452647205)|STATEMENT_EXECUTE|[6]
+12:34:01.0 (452674957)|HEAP_ALLOCATE|[6]|Bytes:4
+12:34:01.0 (452712044)|VARIABLE_ASSIGNMENT|[6]|this.isToday|"2018-09-21T00:00:00.000Z"|0x52c654dd
+12:34:01.0 (452721110)|STATEMENT_EXECUTE|[7]
+12:34:01.0 (452725462)|HEAP_ALLOCATE|[7]|Bytes:289
+12:34:01.0 (452741863)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (453676745)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|SELECT Id, Course_Name__c, Event_Start_Date__c, Capacity_Full__c FROM Event__c WHERE (Course_Name__c = 'Entrepreneur Foundation Training Session 1' AND Capacity_Full__c < 100 AND Event_Start_Date__c > :tmpVar1 AND Event_Status__c != 'Cancelled') ORDER BY Event_Start_Date__c ASC NULLS LAST
+12:34:01.0 (458681317)|SOQL_EXECUTE_END|[7]|Rows:0
+12:34:01.0 (458703414)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (458714396)|HEAP_ALLOCATE|[7]|Bytes:0
+12:34:01.0 (458738459)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (458762719)|VARIABLE_ASSIGNMENT|[7]|this.listOfFutureEFT1Events|[]|0x52c654dd
+12:34:01.0 (458769401)|STATEMENT_EXECUTE|[10]
+12:34:01.0 (458778251)|HEAP_ALLOCATE|[10]|Bytes:4
+12:34:01.0 (458821368)|VARIABLE_ASSIGNMENT|[10]|this.AdviserID|[]|0x52c654dd
+12:34:01.0 (458828196)|STATEMENT_EXECUTE|[12]
+12:34:01.0 (458834639)|HEAP_ALLOCATE|[12]|Bytes:4
+12:34:01.0 (458859836)|VARIABLE_ASSIGNMENT|[12]|this.AdviserAttendedID|[]|0x52c654dd
+12:34:01.0 (458865809)|STATEMENT_EXECUTE|[15]
+12:34:01.0 (458875685)|HEAP_ALLOCATE|[15]|Bytes:4
+12:34:01.0 (458899783)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (458907306)|VARIABLE_ASSIGNMENT|[15]|this.AdviserIds|[]|0x52c654dd
+12:34:01.0 (458957639)|HEAP_ALLOCATE|[16]|Bytes:5
+12:34:01.0 (458975540)|VARIABLE_SCOPE_BEGIN|[16]|a|Adviser__c|true|false
+12:34:01.0 (460195394)|VARIABLE_ASSIGNMENT|[16]|a|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x6fed7248
+12:34:01.0 (460223610)|STATEMENT_EXECUTE|[17]
+12:34:01.0 (460269262)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (460290408)|HEAP_ALLOCATE|[16]|Bytes:5
+12:34:01.0 (460304561)|VARIABLE_ASSIGNMENT|[16]|a|null|
+12:34:01.0 (460309522)|STATEMENT_EXECUTE|[18]
+12:34:01.0 (460882209)|VARIABLE_ASSIGNMENT|[18]|this.a|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x52c654dd
+12:34:01.0 (460958704)|METHOD_ENTRY|[20]|01q36000001RnuZ|mm_SalesStatusSetToReg.isSatusChangedAndSetToRegisteredForEFTSession1(Adviser__c)
+12:34:01.0 (461000313)|VARIABLE_SCOPE_BEGIN|[83]|adviser|Adviser__c|true|false
+12:34:01.0 (461535338)|VARIABLE_ASSIGNMENT|[83]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x6fed7248
+12:34:01.0 (461563759)|STATEMENT_EXECUTE|[83]
+12:34:01.0 (461566114)|STATEMENT_EXECUTE|[85]
+12:34:01.0 (461684810)|METHOD_EXIT|[20]|01q36000001RnuZ|mm_SalesStatusSetToReg.isSatusChangedAndSetToRegisteredForEFTSession1(Adviser__c)
+12:34:01.0 (461706207)|METHOD_ENTRY|[36]|01q36000001RnuZ|mm_SalesStatusSetToReg.isSatusChangedAndSetToEFTSession1Attended(Adviser__c)
+12:34:01.0 (461727121)|VARIABLE_SCOPE_BEGIN|[88]|adviser|Adviser__c|true|false
+12:34:01.0 (462217594)|VARIABLE_ASSIGNMENT|[88]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x6fed7248
+12:34:01.0 (462245903)|STATEMENT_EXECUTE|[88]
+12:34:01.0 (462248213)|STATEMENT_EXECUTE|[89]
+12:34:01.0 (462335938)|METHOD_EXIT|[36]|01q36000001RnuZ|mm_SalesStatusSetToReg.isSatusChangedAndSetToEFTSession1Attended(Adviser__c)
+12:34:01.0 (462351972)|METHOD_ENTRY|[54]|01q36000001RnuZ|mm_SalesStatusSetToReg.isSatusChangedAndSetToRegisteredForEFTSession1(Adviser__c)
+12:34:01.0 (462374717)|VARIABLE_SCOPE_BEGIN|[83]|adviser|Adviser__c|true|false
+12:34:01.0 (462856527)|VARIABLE_ASSIGNMENT|[83]|adviser|{"Deposit_Notification__c":false,"LastModifiedDate":"2018-09-21T19:34:02.000Z","Accounting_Billing_Task_Created__c":false,"Contact_Email__c":"kelly.carroll@matson (9 more) ...","Sales_Status__c":"New","Name":"ADV-101708","Contact_Address__c":"1284 Test Ave_BR_ENC (27 more) ...","CreatedById":"00518000002hPQOAA2","Limited__c":false,"OwnerId":"00518000002hPQOAA2","X3_Biggest_Money_Problems__c":"stufff","Tri_Party__c":false,"RecordTypeId":"01236000000yILNAA2","Primary_Contact__c":"0031800000UMFLLAA5","Primary_Contact_Name__c":"Chester1 Tester1","Primary_Contact_Name_Hidden__c":"Chester1 Tester1","Inventory_Date__c":"2018-09-21T00:00:00.000Z","IsDeleted":false,"Date_Established__c":"2018-09-21T19:34:02.000Z","Preferred_Name__c":"Chester1","MM_Blue__c":false,"Pain_Money_Total__c":10.00,"Listed_on_Exchange__c":false,"Adviser_Number__c":"ADV-101708","SystemModstamp":"2018-09-21T19:34:02.000Z","Contact_First_Name__c":"Chester1","DuplicateCheckADVCONHidden__c":"0031800000UMFLLAA5","CreatedDate":"2018-09-21T19:34:02.000Z","IsSplitName__c":false,"Office_Phone__c":"8376290231","Id":"a0l18000001NTNCAA4","Adviser_Coach__c":"00536000001OWzXAAW","Status__c":"Active Prospect","AdviserCoachAlias__c":"CL","LastModifiedById":"00518000002hPQOAA2","Contact_Last_Name__c":"Tester1"}|0x6fed7248
+12:34:01.0 (462882043)|STATEMENT_EXECUTE|[83]
+12:34:01.0 (462883994)|STATEMENT_EXECUTE|[85]
+12:34:01.0 (462941997)|METHOD_EXIT|[54]|01q36000001RnuZ|mm_SalesStatusSetToReg.isSatusChangedAndSetToRegisteredForEFTSession1(Adviser__c)
+12:34:01.0 (462949761)|STATEMENT_EXECUTE|[20]
+12:34:01.462 (462955498)|CUMULATIVE_LIMIT_USAGE
+12:34:01.462 (462955498)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 11 out of 100
+  Number of query rows: 12 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.462 (462955498)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (463862543)|CODE_UNIT_FINISHED|mm_SalesStatusSetToReg on Adviser trigger event AfterUpdate|__sfdc_trigger/mm_SalesStatusSetToReg
+12:34:01.0 (464753838)|WF_FLOW_ACTION_BEGIN|09Lm00000004Wwy
+12:34:01.467 (467136367)|FLOW_CREATE_INTERVIEW_BEGIN|00D18000000Cve8|30036000000U6bY|301m0000000A7dA
+12:34:01.467 (468232086)|FLOW_CREATE_INTERVIEW_END|90328317be3b01e3481a24ad125b165fd4776c7-79d9|Adviser
+12:34:01.468 (468514944)|FLOW_START_INTERVIEWS_BEGIN|1
+12:34:01.468 (468534743)|FLOW_START_INTERVIEW_BEGIN|90328317be3b01e3481a24ad125b165fd4776c7-79d9|Adviser
+12:34:01.468 (472600344)|FLOW_START_INTERVIEW_END|90328317be3b01e3481a24ad125b165fd4776c7-79d9|Adviser
+12:34:01.468 (472620326)|FLOW_START_INTERVIEWS_END|1
+12:34:01.0 (473546935)|WF_FLOW_ACTION_END|09Lm00000004Wwy
+12:34:01.0 (473587036)|WF_RULE_EVAL_BEGIN|Workflow
+12:34:01.0 (473597858)|WF_SPOOL_ACTION_BEGIN|Workflow
+12:34:01.0 (473605819)|WF_ACTION| None
+12:34:01.0 (473609891)|WF_RULE_EVAL_END
+12:34:01.0 (473685953)|WF_ACTIONS_END| Field Update: 1; Flow Trigger: 1;
+12:34:01.0 (473692959)|CODE_UNIT_FINISHED|Workflow:01I36000002qz04
+12:34:01.0 (473830454)|DML_END|[40]
+12:34:01.0 (473845587)|STATEMENT_EXECUTE|[42]
+12:34:01.0 (482721320)|HEAP_ALLOCATE|[42]|Bytes:4
+12:34:01.0 (482745934)|METHOD_ENTRY|[1]|01p3600000JWFFq|SendFirstEmailClass.SendFirstEmailClass()
+12:34:01.0 (482751907)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (482756092)|STATEMENT_EXECUTE|[1]
+12:34:01.0 (482760525)|METHOD_EXIT|[1]|SendFirstEmailClass
+12:34:01.0 (482784567)|METHOD_ENTRY|[42]|01p3600000JWFFq|SendFirstEmailClass.SendCongratFirstStepsEmail(Id)
+12:34:01.0 (482851955)|VARIABLE_SCOPE_BEGIN|[3]|parentId|Id|false|false
+12:34:01.0 (482899333)|VARIABLE_ASSIGNMENT|[3]|parentId|"a0l18000001NTNCAA4"
+12:34:01.0 (482915010)|STATEMENT_EXECUTE|[4]
+12:34:01.0 (482916840)|STATEMENT_EXECUTE|[5]
+12:34:01.0 (482921142)|HEAP_ALLOCATE|[5]|Bytes:84
+12:34:01.0 (482937597)|HEAP_ALLOCATE|[5]|Bytes:4
+12:34:01.0 (483150296)|SOQL_EXECUTE_BEGIN|[5]|Aggregations:0|SELECT id, DeveloperName FROM EmailTemplate WHERE DeveloperName = 'first_step_email'
+12:34:01.0 (512845863)|SOQL_EXECUTE_END|[5]|Rows:1
+12:34:01.0 (512874501)|HEAP_ALLOCATE|[5]|Bytes:8
+12:34:01.0 (512896055)|HEAP_ALLOCATE|[5]|Bytes:62
+12:34:01.0 (512957401)|HEAP_ALLOCATE|[5]|Bytes:8
+12:34:01.0 (512968295)|HEAP_ALLOCATE|[5]|Bytes:39
+12:34:01.0 (513018271)|HEAP_ALLOCATE|[5]|Bytes:12
+12:34:01.0 (513029096)|VARIABLE_SCOPE_BEGIN|[5]|templateId|EmailTemplate|true|false
+12:34:01.0 (513090288)|VARIABLE_ASSIGNMENT|[5]|templateId|{"Id":"00X36000000SXQjEAO","DeveloperName":"first_step_email"}|0x643963fa
+12:34:01.0 (513101272)|STATEMENT_EXECUTE|[6]
+12:34:01.0 (513106524)|HEAP_ALLOCATE|[6]|Bytes:85
+12:34:01.0 (513122393)|HEAP_ALLOCATE|[6]|Bytes:4
+12:34:01.0 (513446192)|SOQL_EXECUTE_BEGIN|[6]|Aggregations:0|SELECT Primary_Contact__c, Adviser_Coach__r.Email FROM Adviser__c WHERE Id = :tmpVar1
+12:34:01.0 (528625900)|SOQL_EXECUTE_END|[6]|Rows:1
+12:34:01.0 (528648113)|HEAP_ALLOCATE|[6]|Bytes:8
+12:34:01.0 (528671571)|HEAP_ALLOCATE|[6]|Bytes:201
+12:34:01.0 (528704522)|HEAP_ALLOCATE|[6]|Bytes:8
+12:34:01.0 (528718701)|HEAP_ALLOCATE|[6]|Bytes:36
+12:34:01.0 (528736661)|HEAP_ALLOCATE|[6]|Bytes:20
+12:34:01.0 (528743803)|VARIABLE_SCOPE_BEGIN|[6]|adv|Adviser__c|true|false
+12:34:01.0 (528802141)|VARIABLE_ASSIGNMENT|[6]|adv|{"Primary_Contact__c":"0031800000UMFLLAA5","Adviser_Coach__c":"00536000001OWzXAAW","Id":"a0l18000001NTNCAA4","Adviser_Coach__r":{"Id":"00536000001OWzXAAW","Email":"cj.lawson=matsonmone (17 more) ..."}}|0x771a780b
+12:34:01.0 (528810203)|STATEMENT_EXECUTE|[7]
+12:34:01.0 (528866169)|HEAP_ALLOCATE|[7]|Bytes:4
+12:34:01.0 (528930575)|VARIABLE_SCOPE_BEGIN|[7]|allmsg|List<Messaging.SingleEmailMessage>|true|false
+12:34:01.0 (528960951)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (528973843)|VARIABLE_ASSIGNMENT|[7]|allmsg|[]|0x168650d7
+12:34:01.0 (528979906)|STATEMENT_EXECUTE|[8]
+12:34:01.0 (528983720)|HEAP_ALLOCATE|[8]|Bytes:81
+12:34:01.0 (528995585)|HEAP_ALLOCATE|[8]|Bytes:4
+12:34:01.0 (529175218)|SOQL_EXECUTE_BEGIN|[8]|Aggregations:0|SELECT id FROM OrgWideEmailAddress WHERE Address = 'registration@matsonmoney.com'
+12:34:01.0 (533180598)|SOQL_EXECUTE_END|[8]|Rows:1
+12:34:01.0 (533204363)|HEAP_ALLOCATE|[8]|Bytes:8
+12:34:01.0 (533227151)|HEAP_ALLOCATE|[8]|Bytes:29
+12:34:01.0 (533290146)|HEAP_ALLOCATE|[8]|Bytes:8
+12:34:01.0 (533329534)|HEAP_ALLOCATE|[8]|Bytes:8
+12:34:01.0 (533337938)|VARIABLE_SCOPE_BEGIN|[8]|Org|OrgWideEmailAddress|true|false
+12:34:01.0 (533361444)|VARIABLE_ASSIGNMENT|[8]|Org|{"Id":"0D236000000L933CAC"}|0x2dd65d75
+12:34:01.0 (533368359)|STATEMENT_EXECUTE|[10]
+12:34:01.0 (533402544)|VARIABLE_SCOPE_BEGIN|[10]|email|Messaging.SingleEmailMessage|true|false
+12:34:01.0 (533462539)|VARIABLE_ASSIGNMENT|[10]|email|"common.api.soap.wsdl.SingleEmailMessage@346dd5c0"|0x777e2cd0
+12:34:01.0 (533474036)|STATEMENT_EXECUTE|[11]
+12:34:01.0 (533550273)|STATEMENT_EXECUTE|[12]
+12:34:01.0 (533585189)|STATEMENT_EXECUTE|[13]
+12:34:01.0 (533597442)|STATEMENT_EXECUTE|[14]
+12:34:01.0 (533671648)|STATEMENT_EXECUTE|[15]
+12:34:01.0 (533704712)|STATEMENT_EXECUTE|[16]
+12:34:01.0 (533739424)|STATEMENT_EXECUTE|[17]
+12:34:01.0 (533789977)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:34:01.0 (533801366)|STATEMENT_EXECUTE|[19]
+12:34:01.0 (533860946)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (953363430)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:34:01.0 (953409705)|STATEMENT_EXECUTE|[21]
+12:34:01.0 (953423784)|HEAP_ALLOCATE|[21]|Bytes:135
+12:34:01.0 (953467653)|HEAP_ALLOCATE|[21]|Bytes:4
+12:34:01.0 (954109230)|SOQL_EXECUTE_BEGIN|[21]|Aggregations:0|SELECT CreatedBy.Name, MessageDate FROM EmailMessage WHERE (Subject = 'Congratulations On Your First Step!' AND RelatedToId = :tmpVar1)
+12:34:01.0 (970686325)|SOQL_EXECUTE_END|[21]|Rows:1
+12:34:01.0 (970716202)|HEAP_ALLOCATE|[21]|Bytes:8
+12:34:01.0 (970743011)|HEAP_ALLOCATE|[21]|Bytes:145
+12:34:01.0 (970780909)|HEAP_ALLOCATE|[21]|Bytes:8
+12:34:01.0 (970795548)|VARIABLE_SCOPE_BEGIN|[21]|EM|List<EmailMessage>|true|false
+12:34:01.0 (970882194)|VARIABLE_ASSIGNMENT|[21]|EM|[{"CreatedById":"00518000002hPQOAA2","MessageDate":"2018-09-21T19:34:02.000Z","Id":"02s18000001CLDJAA4","CreatedBy":{"Id":"00518000002hPQOAA2","Name":"Matthew Billups"}}]|0x363de8a3
+12:34:01.0 (970891708)|STATEMENT_EXECUTE|[23]
+12:34:01.0 (970904741)|METHOD_EXIT|[42]|01p3600000JWFFq|SendFirstEmailClass.SendCongratFirstStepsEmail(Id)
+12:34:01.0 (970914020)|STATEMENT_EXECUTE|[43]
+12:34:01.0 (970950510)|METHOD_ENTRY|[43]|01p3600000JWFFq|SendFirstEmailClass.GetCongratFirstStepsEmail(Id)
+12:34:01.0 (970979883)|VARIABLE_SCOPE_BEGIN|[26]|parentId|Id|false|false
+12:34:01.0 (971028157)|VARIABLE_ASSIGNMENT|[26]|parentId|"a0l18000001NTNCAA4"
+12:34:01.0 (971046191)|STATEMENT_EXECUTE|[27]
+12:34:01.0 (971048233)|STATEMENT_EXECUTE|[28]
+12:34:01.0 (971063127)|HEAP_ALLOCATE|[28]|Bytes:4
+12:34:01.0 (971347204)|SOQL_EXECUTE_BEGIN|[28]|Aggregations:0|SELECT CreatedBy.Name, MessageDate FROM EmailMessage WHERE (Subject = 'Congratulations On Your First Step!' AND RelatedToId = :tmpVar1)
+12:34:01.0 (978664103)|SOQL_EXECUTE_END|[28]|Rows:1
+12:34:01.0 (978684348)|HEAP_ALLOCATE|[28]|Bytes:8
+12:34:01.0 (978700786)|HEAP_ALLOCATE|[28]|Bytes:145
+12:34:01.0 (978725784)|HEAP_ALLOCATE|[28]|Bytes:8
+12:34:01.0 (978735508)|VARIABLE_SCOPE_BEGIN|[28]|EM|List<EmailMessage>|true|false
+12:34:01.0 (978770964)|VARIABLE_ASSIGNMENT|[28]|EM|[{"CreatedById":"00518000002hPQOAA2","MessageDate":"2018-09-21T19:34:02.000Z","Id":"02s18000001CLDJAA4","CreatedBy":{"Id":"00518000002hPQOAA2","Name":"Matthew Billups"}}]|0xe59f13c
+12:34:01.0 (978778819)|STATEMENT_EXECUTE|[30]
+12:34:01.0 (978785549)|METHOD_EXIT|[43]|01p3600000JWFFq|SendFirstEmailClass.GetCongratFirstStepsEmail(Id)
+12:34:01.978 (978802606)|CUMULATIVE_LIMIT_USAGE
+12:34:01.978 (978802606)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 16 out of 100
+  Number of query rows: 17 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 62 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:34:01.978 (978802606)|CUMULATIVE_LIMIT_USAGE_END
+
+12:34:01.0 (978845017)|CODE_UNIT_FINISHED|SendFirstEmailClassTest.SendFirstEmailTest()
+12:34:01.0 (979927396)|EXECUTION_FINISHED

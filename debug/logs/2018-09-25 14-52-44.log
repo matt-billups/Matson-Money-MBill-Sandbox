@@ -1,0 +1,42 @@
+44.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: System.debug('Event prefix: ' + Event__c.SObjectType.getDescribe().getKeyPrefix());
+14:52:43.1 (1247412)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+14:52:43.1 (1269210)|EXECUTION_STARTED
+14:52:43.1 (1273532)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+14:52:43.1 (1480533)|HEAP_ALLOCATE|[72]|Bytes:3
+14:52:43.1 (1523645)|HEAP_ALLOCATE|[77]|Bytes:152
+14:52:43.1 (1539462)|HEAP_ALLOCATE|[342]|Bytes:408
+14:52:43.1 (1553729)|HEAP_ALLOCATE|[355]|Bytes:408
+14:52:43.1 (1565637)|HEAP_ALLOCATE|[467]|Bytes:48
+14:52:43.1 (1591651)|HEAP_ALLOCATE|[139]|Bytes:6
+14:52:43.1 (1617379)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+14:52:43.1 (1699190)|STATEMENT_EXECUTE|[1]
+14:52:43.1 (1701899)|STATEMENT_EXECUTE|[1]
+14:52:43.1 (1704546)|HEAP_ALLOCATE|[1]|Bytes:14
+14:52:43.1 (1709693)|HEAP_ALLOCATE|[1]|Bytes:8
+14:52:43.1 (1737361)|HEAP_ALLOCATE|[50]|Bytes:5
+14:52:43.1 (1757375)|HEAP_ALLOCATE|[56]|Bytes:5
+14:52:43.1 (1765291)|HEAP_ALLOCATE|[64]|Bytes:7
+14:52:43.1 (22348489)|HEAP_ALLOCATE|[1]|Bytes:4
+14:52:43.1 (22393771)|HEAP_ALLOCATE|[1]|Bytes:3
+14:52:43.1 (22412318)|HEAP_ALLOCATE|[1]|Bytes:17
+14:52:43.1 (22446447)|USER_DEBUG|[1]|DEBUG|Event prefix: a0e
+14:52:43.22 (22501558)|CUMULATIVE_LIMIT_USAGE
+14:52:43.22 (22501558)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:52:43.22 (22501558)|CUMULATIVE_LIMIT_USAGE_END
+
+14:52:43.1 (22536485)|CODE_UNIT_FINISHED|execute_anonymous_apex
+14:52:43.1 (23685786)|EXECUTION_FINISHED

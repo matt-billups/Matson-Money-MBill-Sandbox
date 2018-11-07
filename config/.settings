@@ -1,0 +1,18 @@
+{
+    "projectName": "Matson Money - MBill Sandbox",
+    "username": "matthew.billups@matsonmoney.com.mbill",
+    "id": "b38d39b0-b76f-11e8-b631-f3f5020b907c",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://matsonmoney--MBill.cs23.my.salesforce.com",
+    "workspace": "C:\\Users\\matthew.billups\\Salesforce Workspace",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "StaticResource"
+    ]
+}

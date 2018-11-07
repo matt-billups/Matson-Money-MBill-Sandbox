@@ -1,0 +1,316 @@
+38.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+12:35:00.0 (367899)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+12:35:00.0 (430952)|EXECUTION_STARTED
+12:35:00.0 (438917)|CODE_UNIT_STARTED|[EXTERNAL]|01p3600000IaAb3|addAccountOnCreateContactTest.testSetAccount()
+12:35:00.0 (979262)|HEAP_ALLOCATE|[72]|Bytes:3
+12:35:00.0 (1037136)|HEAP_ALLOCATE|[77]|Bytes:152
+12:35:00.0 (1062512)|HEAP_ALLOCATE|[342]|Bytes:408
+12:35:00.0 (1090394)|HEAP_ALLOCATE|[355]|Bytes:408
+12:35:00.0 (1115733)|HEAP_ALLOCATE|[467]|Bytes:48
+12:35:00.0 (1157106)|HEAP_ALLOCATE|[139]|Bytes:6
+12:35:00.0 (1191604)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:10
+12:35:00.0 (1219064)|METHOD_ENTRY|[1]|01p3600000IaAb3|addAccountOnCreateContactTest.addAccountOnCreateContactTest()
+12:35:00.0 (1230158)|STATEMENT_EXECUTE|[1]
+12:35:00.0 (1237090)|STATEMENT_EXECUTE|[1]
+12:35:00.0 (1242761)|METHOD_EXIT|[1]|addAccountOnCreateContactTest
+12:35:00.0 (1409437)|HEAP_ALLOCATE|[50]|Bytes:5
+12:35:00.0 (1444069)|HEAP_ALLOCATE|[56]|Bytes:5
+12:35:00.0 (1457977)|HEAP_ALLOCATE|[64]|Bytes:7
+12:35:00.0 (1512122)|STATEMENT_EXECUTE|[3]
+12:35:00.0 (1515405)|STATEMENT_EXECUTE|[5]
+12:35:00.0 (1575449)|HEAP_ALLOCATE|[5]|Bytes:4
+12:35:00.0 (1687604)|HEAP_ALLOCATE|[5]|Bytes:4
+12:35:00.0 (1762207)|VARIABLE_ASSIGNMENT|[5]|this.FirstName|"Test"|0x6801b4fb
+12:35:00.0 (1775534)|HEAP_ALLOCATE|[5]|Bytes:7
+12:35:00.0 (1798001)|VARIABLE_ASSIGNMENT|[5]|this.LastName|"Contact"|0x6801b4fb
+12:35:00.0 (1804884)|HEAP_ALLOCATE|[5]|Bytes:10
+12:35:00.0 (1839117)|VARIABLE_ASSIGNMENT|[5]|this.MobilePhone|"5135550123"|0x6801b4fb
+12:35:00.0 (1849505)|HEAP_ALLOCATE|[5]|Bytes:24
+12:35:00.0 (1903330)|VARIABLE_ASSIGNMENT|[5]|this.Email|"test.contact@example (4 more) ..."|0x6801b4fb
+12:35:00.0 (1949828)|VARIABLE_SCOPE_BEGIN|[5]|c|Contact|true|false
+12:35:00.0 (1997248)|VARIABLE_ASSIGNMENT|[5]|c|{"FirstName":"Test","LastName":"Contact","MobilePhone":"5135550123","Email":"test.contact@example (4 more) ..."}|0x6801b4fb
+12:35:00.0 (2008888)|STATEMENT_EXECUTE|[6]
+12:35:00.0 (2044924)|HEAP_ALLOCATE|[6]|Bytes:8
+12:35:00.0 (2056220)|DML_BEGIN|[6]|Op:Insert|Type:Contact|Rows:1
+12:35:00.0 (2097714)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:35:00.16 (16663861)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:35:00.16 (16744163)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:35:00.16 (16758413)|VARIABLE_SCOPE_BEGIN|[1]|this|pi.LogContactChange|true|false
+12:35:00.16 (16814429)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x40f743f
+12:35:00.20 (20612665)|CUMULATIVE_LIMIT_USAGE
+12:35:00.20 (20612665)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:35:00.20 (20612665)|CUMULATIVE_LIMIT_USAGE_END
+
+12:35:00.0 (23308106)|CODE_UNIT_STARTED|[EXTERNAL]|01q36000001RnuT|addAccountOnCreateContact on Contact trigger event BeforeInsert|__sfdc_trigger/addAccountOnCreateContact
+12:35:00.0 (23343603)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:35:00.0 (23383922)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+12:35:00.0 (23391789)|VARIABLE_SCOPE_BEGIN|[1]|this|addAccountOnCreateContact|true|false
+12:35:00.0 (23424514)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x79ce85c6
+12:35:00.0 (23462621)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+12:35:00.0 (23470099)|VARIABLE_SCOPE_BEGIN|[1]|this|addAccountOnCreateContact|true|false
+12:35:00.0 (23483281)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x79ce85c6
+12:35:00.0 (23490796)|STATEMENT_EXECUTE|[1]
+12:35:00.0 (23492897)|STATEMENT_EXECUTE|[3]
+12:35:00.0 (23528267)|HEAP_ALLOCATE|[3]|Bytes:4
+12:35:00.0 (23628017)|VARIABLE_ASSIGNMENT|[3]|this.account|{}|0x79ce85c6
+12:35:00.0 (23634900)|STATEMENT_EXECUTE|[4]
+12:35:00.0 (23639492)|HEAP_ALLOCATE|[4]|Bytes:72
+12:35:00.0 (23656165)|HEAP_ALLOCATE|[4]|Bytes:4
+12:35:00.0 (23825460)|SOQL_EXECUTE_BEGIN|[4]|Aggregations:0|SELECT Id, Name FROM Account WHERE Name = 'Matson Money Default' LIMIT 1
+12:35:00.0 (28081273)|SOQL_EXECUTE_END|[4]|Rows:1
+12:35:00.0 (28101937)|HEAP_ALLOCATE|[4]|Bytes:8
+12:35:00.0 (28114301)|HEAP_ALLOCATE|[4]|Bytes:57
+12:35:00.0 (28156461)|HEAP_ALLOCATE|[4]|Bytes:8
+12:35:00.0 (28214818)|VARIABLE_ASSIGNMENT|[4]|this.accts|[{"Id":"001m000000ct5swAAA","Name":"Matson Money Default"}]|0x79ce85c6
+12:35:00.0 (28304752)|STATEMENT_EXECUTE|[10]
+12:35:00.0 (28307594)|STATEMENT_EXECUTE|[11]
+12:35:00.0 (28323124)|HEAP_ALLOCATE|[11]|Bytes:12
+12:35:00.0 (28343947)|VARIABLE_ASSIGNMENT|[11]|this.account|{"Id":"001m000000ct5swAAA","Name":"Matson Money Default"}|0x79ce85c6
+12:35:00.0 (28399277)|HEAP_ALLOCATE|[14]|Bytes:5
+12:35:00.0 (28417071)|HEAP_ALLOCATE|[14]|Bytes:4
+12:35:00.0 (28425297)|VARIABLE_SCOPE_BEGIN|[14]|c|Contact|true|false
+12:35:00.0 (30939394)|VARIABLE_ASSIGNMENT|[14]|c|{"IsDeleted":false,"Email":"test.contact@example (4 more) ...","IsEmailBounced":false,"DoNotCall":false,"Preferred_Name__c":"Test","OtherCountryCode":"US","ContactFnameLNameLegacyID__c":"TestContact","FirstName":"Test","HasOptedOutOfEmail":false,"HasOptedOutOfFax":false,"pi__Needs_Score_Synced__c":false,"MobilePhone":"5135550123","Matson_Event_Marketing_Email_Opt_Out__c":false,"OwnerId":"00518000002hPQOAA2","Full_Name__c":"Test Contact","MailingCountryCode":"US","IsSplitName__c":false,"pi__pardot_hard_bounced__c":false,"LastName":"Contact"}|0x617e94d8
+12:35:00.0 (30958610)|STATEMENT_EXECUTE|[14]
+12:35:00.0 (30960889)|STATEMENT_EXECUTE|[15]
+12:35:00.0 (31451338)|VARIABLE_ASSIGNMENT|[15]|this.AccountId|"001m000000ct5swAAA"|0x617e94d8
+12:35:00.0 (31478282)|HEAP_ALLOCATE|[14]|Bytes:5
+12:35:00.0 (31497568)|VARIABLE_ASSIGNMENT|[14]|c|null|
+12:35:00.31 (31508716)|CUMULATIVE_LIMIT_USAGE
+12:35:00.31 (31508716)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:35:00.31 (31508716)|CUMULATIVE_LIMIT_USAGE_END
+
+12:35:00.0 (32681213)|CODE_UNIT_FINISHED|addAccountOnCreateContact on Contact trigger event BeforeInsert|__sfdc_trigger/addAccountOnCreateContact
+12:35:00.0 (40515841)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Contact:new
+12:35:00.0 (40532179)|VALIDATION_RULE|03d36000000y4Yd|Asst_must_be_10_digits_and_numeric
+12:35:00.0 (40625396)|VALIDATION_FORMULA|AND(NOT(ISBLANK( AssistantPhone )), 
+
+OR(NOT(ISNUMBER(AssistantPhone )), 
+LEN(AssistantPhone ) >10) 
+
+
+)|AssistantPhone=null
+12:35:00.0 (40633818)|VALIDATION_PASS
+12:35:00.0 (40636120)|VALIDATION_RULE|03d36000000nF6a|DOB_Validation
+12:35:00.0 (40787590)|VALIDATION_FORMULA|OR(
+    DOB__c > TODAY(), 
+    YEAR(DOB__c) < YEAR(TODAY())- 115, 
+    OR(
+        AND(YEAR(DOB__c) = YEAR(TODAY()) - 115, 
+            OR(
+                MONTH(DOB__c) < MONTH(TODAY()), 
+                AND(
+                    MONTH(DOB__c) = MONTH(TODAY()), 
+                    DAY(DOB__c) < DAY(TODAY())
+                )
+            )
+        )
+    )
+)|DOB__c=null
+12:35:00.0 (40797170)|VALIDATION_PASS
+12:35:00.0 (40798846)|VALIDATION_RULE|03d36000000y4Ye|Fax_must_be_10_digits_and_numeric
+12:35:00.0 (40854831)|VALIDATION_FORMULA|AND(NOT(ISBLANK(Fax)),
+
+ OR(NOT(ISNUMBER(Fax)) ,
+   LEN(Fax) >10)
+
+
+
+)|Fax=null
+12:35:00.0 (40860977)|VALIDATION_PASS
+12:35:00.0 (40862563)|VALIDATION_RULE|03d36000000y4Yf|Home_Phone_must_be_10_digits_and_numeric
+12:35:00.0 (40912427)|VALIDATION_FORMULA|AND(NOT(ISBLANK( HomePhone )), 
+
+OR(NOT(ISNUMBER(HomePhone )) , 
+LEN(HomePhone ) >10) 
+
+
+
+)|HomePhone=null
+12:35:00.0 (40918661)|VALIDATION_PASS
+12:35:00.0 (40920171)|VALIDATION_RULE|03d36000000y4Yg|Mobile_must_be_10_digits_and_numeric
+12:35:00.0 (40981001)|VALIDATION_FORMULA|AND(NOT(ISBLANK( MobilePhone )), 
+
+OR(NOT(ISNUMBER(MobilePhone )) , 
+LEN(MobilePhone ) >10) 
+
+
+
+)|MobilePhone=5135550123
+12:35:00.0 (40987056)|VALIDATION_PASS
+12:35:00.0 (40988570)|VALIDATION_RULE|03d36000000nF6b|Nine_Digits_in_SSN
+12:35:00.0 (41086588)|VALIDATION_FORMULA|AND(NOT(ISBLANK( Social_Security_Number__c )), OR(NOT(ISNUMBER( Social_Security_Number__c )), NOT(LEN( Social_Security_Number__c ) = 9)))|Social_Security_Number__c=*****
+12:35:00.0 (41093954)|VALIDATION_PASS
+12:35:00.0 (41095520)|VALIDATION_RULE|03d36000000y4Yh|Office_Phone_must_be_10_digits_numeric
+12:35:00.0 (41150802)|VALIDATION_FORMULA|AND(NOT(ISBLANK(Office_Phone__c)), 
+
+OR(NOT(ISNUMBER(Office_Phone__c)), 
+LEN(Office_Phone__c) >10) 
+
+
+
+)|Office_Phone__c=null
+12:35:00.0 (41156796)|VALIDATION_PASS
+12:35:00.0 (41158370)|VALIDATION_RULE|03d36000000y4Yi|Other_Phone_must_be_10_digits_numeric
+12:35:00.0 (41225496)|VALIDATION_FORMULA|AND(NOT(ISBLANK(  OtherPhone )), 
+
+OR(NOT(ISNUMBER(OtherPhone)) , 
+LEN(OtherPhone) >10) 
+
+
+
+)|OtherPhone=null
+12:35:00.0 (41232084)|VALIDATION_PASS
+12:35:00.0 (41233856)|VALIDATION_RULE|03d36000000y4Yj|Phone_must_be_10_digits_and_numeric
+12:35:00.0 (41283504)|VALIDATION_FORMULA|AND(NOT(ISBLANK(  Phone)), 
+
+OR(NOT(ISNUMBER(Phone)) , 
+LEN(Phone) >10) 
+
+
+
+)|Phone=null
+12:35:00.0 (41289139)|VALIDATION_PASS
+12:35:00.0 (41290705)|VALIDATION_RULE|03dm00000002Rs2|Accounting_Profile_Should_Not_Edit_Name
+12:35:00.0 (45047058)|VALIDATION_FORMULA|AND($Profile.Name = "Accounting",
+OR(ISCHANGED(FirstName), 
+ISCHANGED(LastName), 
+ISCHANGED( MiddleName),
+ISCHANGED( Suffix)
+))|$Profile.Name=System Administrator , Suffix=null , FirstName=Test , LastName=Contact , MiddleName=null
+12:35:00.0 (45058292)|VALIDATION_PASS
+12:35:00.0 (45060317)|VALIDATION_RULE|03d36000000xpmi|Require_First_Name
+12:35:00.0 (45117598)|VALIDATION_FORMULA|ISBLANK(FirstName )|FirstName=Test
+12:35:00.0 (45123534)|VALIDATION_PASS
+12:35:00.0 (45243065)|CODE_UNIT_FINISHED|Validation:Contact:new
+12:35:00.0 (45613059)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector
+12:35:00.0 (45623662)|DUPLICATE_DETECTION_BEGIN
+12:35:00.0 (45879393)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm36000000lgxn|DuplicateRuleName:Standard Contact Duplicate Rule|DmlType:INSERT
+12:35:00.0 (69005408)|DUPLICATE_DETECTION_MATCH_INVOCATION_DETAILS|EntityType:Contact|ActionTaken:Block|DuplicateRecordIds:
+12:35:00.0 (69022083)|DUPLICATE_DETECTION_MATCH_INVOCATION_SUMMARY|EntityType:Contact|NumRecordsToBeSaved:1|NumRecordsToBeSavedWithDuplicates:0|NumDuplicateRecordsFound:0
+12:35:00.0 (69119667)|DUPLICATE_DETECTION_END
+12:35:00.0 (69125885)|CODE_UNIT_FINISHED|DuplicateDetector
+12:35:00.142 (142180767)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:35:00.142 (142249399)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:35:00.142 (142258971)|VARIABLE_SCOPE_BEGIN|[1]|this|pi.LogContactChange|true|false
+12:35:00.142 (142284847)|VARIABLE_ASSIGNMENT|[1]|this|{}|0xf959630
+12:35:00.174 (174949581)|CUMULATIVE_LIMIT_USAGE
+12:35:00.174 (174949581)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 26 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:35:00.174 (174949581)|CUMULATIVE_LIMIT_USAGE_END
+
+12:35:00.0 (177127844)|CODE_UNIT_STARTED|[EXTERNAL]|01qm00000000r5O|mm_SSN_Validation on Contact trigger event AfterInsert|__sfdc_trigger/mm_SSN_Validation
+12:35:00.0 (177166084)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+12:35:00.0 (177205021)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:35:00.0 (177212917)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_SSN_Validation|true|false
+12:35:00.0 (177235795)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x54e2c6a2
+12:35:00.0 (177273341)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+12:35:00.0 (177280596)|VARIABLE_SCOPE_BEGIN|[1]|this|mm_SSN_Validation|true|false
+12:35:00.0 (177293711)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x54e2c6a2
+12:35:00.0 (177301273)|STATEMENT_EXECUTE|[1]
+12:35:00.0 (177363965)|HEAP_ALLOCATE|[4]|Bytes:5
+12:35:00.0 (177385932)|VARIABLE_SCOPE_BEGIN|[4]|contact|Contact|true|false
+12:35:00.0 (178414453)|VARIABLE_ASSIGNMENT|[4]|contact|{"LastModifiedDate":"2018-09-21T19:35:00.000Z","AccountId":"001m000000ct5swAAA","Email":"test.contact@example (4 more) ...","DoNotCall":false,"ContactFnameLNameLegacyID__c":"TestContact","MailingCountry":"United States","HasOptedOutOfFax":false,"pi__Needs_Score_Synced__c":false,"MobilePhone":"5135550123","Matson_Event_Marketing_Email_Opt_Out__c":false,"OwnerId":"00518000002hPQOAA2","CreatedById":"00518000002hPQOAA2","OtherCountry":"United States","IsDeleted":false,"IsEmailBounced":false,"Preferred_Name__c":"Test","OtherCountryCode":"US","FirstName":"Test","HasOptedOutOfEmail":false,"SystemModstamp":"2018-09-21T19:35:00.000Z","Full_Name__c":"Test Contact","MailingCountryCode":"US","CreatedDate":"2018-09-21T19:35:00.000Z","IsSplitName__c":false,"pi__pardot_hard_bounced__c":false,"Id":"0031800000UMFO0AAP","LastName":"Contact","LastModifiedById":"00518000002hPQOAA2"}|0xc89b702
+12:35:00.0 (178434604)|STATEMENT_EXECUTE|[4]
+12:35:00.0 (178502371)|STATEMENT_EXECUTE|[6]
+12:35:00.0 (178515630)|HEAP_ALLOCATE|[4]|Bytes:5
+12:35:00.0 (178531294)|VARIABLE_ASSIGNMENT|[4]|contact|null|
+12:35:00.178 (178540436)|CUMULATIVE_LIMIT_USAGE
+12:35:00.178 (178540436)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 26 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:35:00.178 (178540436)|CUMULATIVE_LIMIT_USAGE_END
+
+12:35:00.0 (179426785)|CODE_UNIT_FINISHED|mm_SSN_Validation on Contact trigger event AfterInsert|__sfdc_trigger/mm_SSN_Validation
+12:35:00.0 (187098801)|DML_END|[6]
+12:35:00.0 (187114579)|STATEMENT_EXECUTE|[8]
+12:35:00.0 (187120716)|HEAP_ALLOCATE|[8]|Bytes:64
+12:35:00.0 (187145633)|HEAP_ALLOCATE|[8]|Bytes:4
+12:35:00.0 (187315013)|SOQL_EXECUTE_BEGIN|[8]|Aggregations:0|SELECT Id, Name FROM Account WHERE Name = 'Matson Money Default'
+12:35:00.0 (194158459)|SOQL_EXECUTE_END|[8]|Rows:1
+12:35:00.0 (194185595)|HEAP_ALLOCATE|[8]|Bytes:8
+12:35:00.0 (194198653)|HEAP_ALLOCATE|[8]|Bytes:57
+12:35:00.0 (194225214)|HEAP_ALLOCATE|[8]|Bytes:8
+12:35:00.0 (194248133)|HEAP_ALLOCATE|[8]|Bytes:12
+12:35:00.0 (194256024)|VARIABLE_SCOPE_BEGIN|[8]|acct|Account|true|false
+12:35:00.0 (194277701)|VARIABLE_ASSIGNMENT|[8]|acct|{"Id":"001m000000ct5swAAA","Name":"Matson Money Default"}|0x5502fa9f
+12:35:00.0 (194284606)|STATEMENT_EXECUTE|[9]
+12:35:00.0 (194289141)|HEAP_ALLOCATE|[9]|Bytes:49
+12:35:00.0 (194303015)|HEAP_ALLOCATE|[9]|Bytes:4
+12:35:00.0 (194310590)|HEAP_ALLOCATE|[9]|Bytes:7
+12:35:00.0 (194497635)|SOQL_EXECUTE_BEGIN|[9]|Aggregations:0|SELECT AccountId FROM Contact WHERE Id = :tmpVar1
+12:35:00.0 (198600399)|SOQL_EXECUTE_END|[9]|Rows:1
+12:35:00.0 (198620150)|HEAP_ALLOCATE|[9]|Bytes:8
+12:35:00.0 (198631888)|HEAP_ALLOCATE|[9]|Bytes:60
+12:35:00.0 (198656479)|HEAP_ALLOCATE|[9]|Bytes:8
+12:35:00.0 (198666404)|HEAP_ALLOCATE|[9]|Bytes:33
+12:35:00.0 (198681053)|HEAP_ALLOCATE|[9]|Bytes:12
+12:35:00.0 (198700837)|VARIABLE_ASSIGNMENT|[9]|c|{"AccountId":"001m000000ct5swAAA","Id":"0031800000UMFO0AAP"}|0x779f440e
+12:35:00.0 (198707444)|STATEMENT_EXECUTE|[10]
+12:35:00.198 (198778081)|CUMULATIVE_LIMIT_USAGE
+12:35:00.198 (198778081)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 26 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:35:00.198 (198778081)|CUMULATIVE_LIMIT_USAGE_END
+
+12:35:00.0 (198803805)|CODE_UNIT_FINISHED|addAccountOnCreateContactTest.testSetAccount()
+12:35:00.0 (199814341)|EXECUTION_FINISHED

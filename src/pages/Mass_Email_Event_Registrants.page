@@ -1,0 +1,121 @@
+<apex:page standardController="Event_Registration__c" extensions="EventRegistrationExtController" tabStyle="Event_Registration__c" recordSetVar="AllRegistrants" lightningStylesheets="true">
+    <style type="text/css">
+        
+        .allPicklistStyle
+        {
+        text-align: center; 
+        margin:auto;
+        }
+        .pbSubsection
+        {
+        width:700px !important;
+        margin:auto;        
+        }        
+        .detailList
+        {
+        width:700px !important;
+        margin:auto;
+       	table-layout: auto !important;
+        }     
+        .picklistStyle
+        {
+        width:500px;
+        width-min: 500px;
+        text-align: left;
+        margin:auto;
+        }
+        
+        .previewEmail 
+        { 
+        display:block;
+        width:600px;
+        margin:auto;
+        }       
+        .emailTemplatePreview
+        {
+        text-align: center;    
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid transparent;
+        padding: 0 .5rem;
+        width: 100% !important;
+        font-size: 1rem;
+        line-height: 1.875rem;
+        background-color: rgb(243, 242, 242);
+        }
+        .recipientList
+        {
+        margin:auto;
+        }
+        
+    </style>
+    <apex:form >
+        
+        <apex:pageBlock id="pBlock"  title="Mass Email Event Registrants" >
+            
+            <apex:messages />
+            
+            <apex:pageBlockButtons location="bottom" rendered="{!selectedEmailTemplate <> '' }" >
+                <apex:commandButton id="sendToSelectedButton" action="{!sendToSelected}" value="Send to Selected Registrants" status="pageStatus" reRender="text"  rendered="{!displayList}"/>
+                <apex:commandButton action="{!sendToAll}" value="Send to All Registrants in List" status="pageStatus" reRender="text" rendered="{!displayList}"/>
+                <apex:commandButton action="{!sendProofToMe}" value="Send Email Proof to Me" reRender="text" rendered="{!displayList}"/>
+                 <apex:commandButton action="{!confirmClick}" value="Confirm" reRender="pBlock" rendered="{!DisplayConfirm}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Email Template Selection" columns="1" collapsible="false" showHeader="false" >
+                <apex:actionStatus id="pageStatus">
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <img src="/img/loading32.gif" width="25" height="25" />
+                            <apex:outputLabel value="Sending emails..."/>
+                        </apex:outputPanel>
+                    </apex:facet>
+                </apex:actionStatus>             
+                <apex:pageBlockSectionItem >     
+                    <apex:outputLabel value="From Address" for="fromAddress"/>
+                    <apex:selectList id="fromAddress" size="1" value="{!SelectedOrgWideEmailAddressId}" multiselect="false" styleClass="picklistStyle">
+                        <apex:selectOptions value="{!EmailAddressListItems}"/>
+                        <apex:actionSupport event="onchange" reRender="pBlock" />
+                    </apex:selectList>  
+                </apex:pageBlockSectionItem> 
+                <apex:pageBlockSectionItem rendered="{!SelectedOrgWideEmailAddressId <> ''}" >
+                    <apex:outputLabel value="Email Template Folder" for="emailTemplateFolder"/>
+                    <apex:selectList id="emailTemplateFolder" size="1" value="{!selectedEmailTemplateFolderName}" multiselect="false" styleClass="picklistStyle" >
+                        <apex:selectOptions value="{!EmailTemplateFolderListItems}"/>
+                        <apex:actionSupport event="onchange"  reRender="pBlock" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!selectedEmailTemplateFolderName <> ''}">
+                    <apex:outputLabel value="Email Template" for="emailTemplate"/>
+                    <apex:selectList id="emailTemplate" size="1" value="{!selectedEmailTemplate}" multiselect="false" styleClass="picklistStyle" >
+                        <apex:selectOptions value="{!EmailTemplateListItems}"/>
+                        <apex:actionSupport event="onchange"  reRender="pBlock"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+          
+                <apex:outputPanel layout="block" styleClass="emailTemplatePreview" rendered="{!selectedEmailTemplate <> '' && NOT(displayList)}">
+                    <apex:outputText value="Email Template Preview:" rendered="{!selectedEmailTemplate <> '' }" styleClass="emailTemplatePreview" /> 
+                </apex:outputPanel>        
+            <br />
+                    <apex:outputText id="templateBody" value="{0}" escape="false" styleClass="previewEmail" rendered="{!selectedEmailTemplate <> '' && NOT(displayList)}" > 
+                        <apex:param value="{!SelectedEmailTemplateBody}" />
+                    </apex:outputText>
+
+                <apex:outputPanel rendered="{!displayList}" styleClass="recipientList">
+                    <apex:dataTable value="{!ListOfRecipients}" var="recipient" id="recTable" styleClass="recipientList">
+                        <apex:column style="padding-right: 25px">{!recipient.Contact__r.FirstName + ' ' + recipient.Contact__r.LastName}
+                            <apex:facet name="header">Name</apex:facet>
+                        </apex:column>
+                        <apex:column>{!recipient.Contact__r.Email}
+                            <apex:facet name="header">Email</apex:facet>
+                        </apex:column>
+                        
+                    </apex:dataTable>
+                </apex:outputPanel>
+
+     
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

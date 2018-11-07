@@ -1,0 +1,61 @@
+.THIS .fullPage
+{
+    float: left;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+.THIS .rightSide 
+{
+    float: right;
+    width: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.THIS li
+{
+    border-bottom: solid 1px #DDDDDD;
+    padding: 8px;
+}
+
+.THIS .left
+{
+    float: left;
+    width: 30%;
+    
+}
+
+.THIS .right
+{
+    float: right;
+    width: 30%;
+}
+
+.THIS .center
+{
+    margin: auto;
+    width: 30%;
+}
+.THIS .checkbox-div{
+    float: left;
+    color:Black;
+    display: inline;
+    padding-left:20px;
+    
+}
+.THIS  .red-checkbox{
+    border-color: rgb(0,0,0); /*Choose your color*/
+    box-shadow: 0 0 5px #C0C0C0; /*Choose a darker color for the shadow*/
+    color : rgb(0,0,0);
+    display: inline;
+    float: left;
+}
+
+.THIS input[type=checkbox]:red-checkbox{
+    color : rgb(255,0,0); /*Choose your color*/
+    box-shadow: 0 0 5px #006A00; /*Choose a darker color for the shadow*/
+    background-color: rgb(0, 178, 0);
+}

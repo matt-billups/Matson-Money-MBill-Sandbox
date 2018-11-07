@@ -1,0 +1,30 @@
+<apex:page standardcontroller="Lead" recordsetvar="leads" extensions="mm_LeadControllerExtension" showheader="false" sidebar="false">
+    <apex:pageblock title="Local Advisors">
+        <apex:pageblocktable value="{!LocalAdvisors}" var="advisor" id="localAdvisorsTable" headerclass="headerRow" rowclasses="odd,even" styleclass="list">
+            <apex:column width="50">
+                <apex:facet name="header">First Name</apex:facet>
+                <apex:outputtext value="{!advisor.firstName}"></apex:outputtext>
+            </apex:column>
+            <apex:column width="50">
+                <apex:facet name="header">Last Name</apex:facet>
+                <apex:outputtext value="{!advisor.lastName}"> </apex:outputtext>
+            </apex:column>
+            <apex:column width="50">
+                <apex:facet name="header">City</apex:facet>
+                <apex:outputtext value="{!advisor.city}"> </apex:outputtext>
+            </apex:column>
+            <apex:column width="50">
+                <apex:facet name="header">State</apex:facet>
+                <apex:outputtext value="{!advisor.state}"> </apex:outputtext>
+            </apex:column>
+            <apex:column width="50">
+                <apex:facet name="header">Distance</apex:facet>
+                <apex:outputtext value="{!advisor.distance}"> </apex:outputtext>
+            </apex:column>
+            <apex:column width="50">
+                <apex:facet name="header">Phone</apex:facet>
+                <apex:outputtext value="{!advisor.phone}"> </apex:outputtext>
+            </apex:column>
+        </apex:pageblocktable>
+    </apex:pageblock>
+</apex:page>

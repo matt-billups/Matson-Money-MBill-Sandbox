@@ -1,0 +1,9 @@
+44.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+16:32:03.0 (303234)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+16:32:03.0 (335510)|EXECUTION_STARTED
+16:32:03.0 (340414)|CODE_UNIT_STARTED|[EXTERNAL]|VisualForce View State
+16:32:03.0 (6204804)|CODE_UNIT_FINISHED|VisualForce View State
+16:32:03.0 (7139808)|EXECUTION_FINISHED
+16:32:03.11 (11124571)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+16:32:03.11 (63182614)|FLOW_ELEMENT_ERROR|This error occurred when the flow tried to create records: MALFORMED_ID: Primary Matson Event: id value of incorrect type: SEINFELD. You can look up ExceptionCode values in the <a href='https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm#'>SOAP API Developer Guide</a>.|FlowRecordCreate|Create_New_Event
+16:32:03.11 (79922588)|FLOW_ELEMENT_ERROR|This error occurred when the flow tried to create records: MALFORMED_ID: Primary Matson Event: id value of incorrect type: SEINFELD. You can look up ExceptionCode values in the <a href='https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm#'>SOAP API Developer Guide</a>.|FlowScreen|Matson_Event_Cloning

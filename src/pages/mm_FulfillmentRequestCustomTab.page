@@ -1,0 +1,40 @@
+<apex:page id="fulfillment_RequestTab" standardController="Fulfillment_Request__c" extensions="mm_FulfillmentRequestControllerExtension" recordSetVar="requests" title="Fulfillment Requests">
+    
+<apex:form >
+        <apex:pageBlock title="Fulfillment Requests Waiting to be Shipped">
+                
+            <apex:pageBlockTable value="{!RequestsNotShipped}" var="request" id="requestsNotShippedTable" headerClass="headerRow" rowClasses="odd,even" styleClass="list">
+            
+                <apex:column >
+                    <apex:facet name="header">Name</apex:facet>
+                    <a id="idLink" href="/{!request.Id}">{!request.ship_to_name__c}</a>
+                </apex:column>
+        
+                <apex:column >
+                    <apex:facet name="header">Due Date</apex:facet>
+                    <apex:outputtext value="{0,date,MM/dd/yyyy}">
+                        <apex:param value="{!request.Ship_By__c}" />
+                    </apex:outputtext>
+                </apex:column>
+            
+            </apex:pageBlockTable>
+            
+            <br/>
+            
+            <!-- List Navigation -->
+            <apex:commandButton disabled="{!(NotShippedCon.hasPrevious == false)}" value="first" action="{!NotShippedCon.first}"/>
+            <apex:commandButton disabled="{!(NotShippedCon.hasPrevious == false)}" value="previous" action="{!NotShippedCon.previous}"/>
+            &nbsp;
+            <apex:outputText rendered="{!(NotShippedCon.pageNumber * NotShippedCon.pageSize) < NotShippedCon.ResultSize}" value="{!NotShippedCon.pageNumber * NotShippedCon.pageSize} Of {!NotShippedCon.ResultSize}"></apex:outputText>
+            <apex:outputText rendered="{!(NotShippedCon.pageNumber * NotShippedCon.pageSize) >= NotShippedCon.ResultSize}" value="{!NotShippedCon.ResultSize} Of {!NotShippedCon.ResultSize}"></apex:outputText>
+            &nbsp;
+            <apex:commandButton disabled="{!(NotShippedCon.hasNext == false)}" value="next" action="{!NotShippedCon.next}"/>
+            <apex:commandButton disabled="{!(NotShippedCon.hasNext == false)}" value="last" action="{!NotShippedCon.last}"/>            
+            
+        </apex:pageBlock>            
+    </apex:form>
+    
+    <apex:pageBlock title="Lists">
+        <apex:enhancedList type="Fulfillment_Request__c" rowsperpage="25" height="720" />        
+    </apex:pageBlock>   
+</apex:page>

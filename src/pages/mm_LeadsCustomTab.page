@@ -1,0 +1,68 @@
+<apex:page id="leadsTab" standardController="Lead" extensions="mm_LeadControllerExtension" recordSetVar="leads" title="Leads">
+    
+    <head title="Leads">
+        <apex:includeScript value="{!URLFOR($Resource.jQuery, '/jquery-ui-1.11.4.custom/external/jquery/jquery.js')}"  />
+        <apex:includeScript value="{!URLFOR($Resource.jQuery, '/jquery-ui-1.11.4.custom/jquery-ui.min.js')}"  />
+    </head>
+    
+    <div class="content">
+        <img src='/s.gif' alt='Lead' class='pageTitleIcon' title='Lead' />
+        <h1 class="pageType">Leads<span class="titleSeparatingColon">:</span></h1>
+        <h2 class="pageDescription"> Home</h2>
+        <div class="blank">&nbsp;</div>
+    </div>  
+
+    <apex:form >
+        <apex:pageBlock title="Investor Outreach Sales Lead Queue">
+                
+            <apex:pageBlockTable value="{!LeadsInSalesQueue}" var="lead" id="openLeadsTable" headerClass="headerRow" rowClasses="odd,even" styleClass="list">
+            
+                <apex:column width="100">
+                    <apex:facet name="header">Name</apex:facet>
+                    <a id="idLink" href="/{!lead.Id}">{!lead.name}</a>
+                </apex:column>
+        
+                <apex:column width="25">
+                    <apex:facet name="header">Email</apex:facet>
+                    <apex:outputText value="{!lead.email}"></apex:outputText>
+                </apex:column>
+            
+                <apex:column width="20">
+                    <apex:facet name="header">State</apex:facet>
+                    <apex:outputtext value="{!lead.state}"></apex:outputtext>
+                </apex:column>
+
+                <apex:column width="25">
+                    <apex:facet name="header">Phone</apex:facet>
+                    <apex:outputtext value="{!lead.phone}" />
+                </apex:column>
+
+                <apex:column width="25">
+                    <apex:facet name="header">Last Modified Date</apex:facet>
+                    <apex:outputtext value="{0,date,MM/dd/yyyy}">
+                        <apex:param value="{!lead.LastModifiedDate}" />
+                    </apex:outputtext>
+                </apex:column>
+
+            </apex:pageBlockTable>
+            
+            <br/>
+            
+            <!-- List Navigation -->
+            <apex:commandButton disabled="{!(LeadQueueCon.hasPrevious == false)}" value="first" action="{!LeadQueueCon.first}"/>
+            <apex:commandButton disabled="{!(LeadQueueCon.hasPrevious == false)}" value="previous" action="{!LeadQueueCon.previous}"/>
+            &nbsp;
+            <apex:outputText rendered="{!(LeadQueueCon.pageNumber * LeadQueueCon.pageSize) < LeadQueueCon.ResultSize}" value="{!LeadQueueCon.pageNumber * LeadQueueCon.pageSize} Of {!LeadQueueCon.ResultSize}"></apex:outputText>
+            <apex:outputText rendered="{!(LeadQueueCon.pageNumber * LeadQueueCon.pageSize) >= LeadQueueCon.ResultSize}" value="{!LeadQueueCon.ResultSize} Of {!LeadQueueCon.ResultSize}"></apex:outputText>
+            &nbsp;
+            <apex:commandButton disabled="{!(LeadQueueCon.hasNext == false)}" value="next" action="{!LeadQueueCon.next}"/>
+            <apex:commandButton disabled="{!(LeadQueueCon.hasNext == false)}" value="last" action="{!LeadQueueCon.last}"/>            
+            
+        </apex:pageBlock>            
+    </apex:form>
+    
+    <apex:pageBlock title="Lists">
+        <apex:enhancedlist type="Lead" rowsPerPage="25" height="725" />        
+    </apex:pageBlock>
+
+</apex:page>

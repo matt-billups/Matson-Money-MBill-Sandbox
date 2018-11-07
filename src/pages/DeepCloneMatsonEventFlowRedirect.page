@@ -1,0 +1,6 @@
+<apex:page standardController="Event__c" tabStyle="Event__c">
+    <flow:interview name="Deep_Clone_Matson_Event" finishLocation="{!URLFOR('/a0e/o')}">
+    	<apex:param name="MatsonEventID" value="{!Event__c.Id}"/>
+    	<apex:param name="EventToCloneRecordTypeId" value="{!Event__c.RecordTypeId}"/>
+	</flow:interview>
+</apex:page>

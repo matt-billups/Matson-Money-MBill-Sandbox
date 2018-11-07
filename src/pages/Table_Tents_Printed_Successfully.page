@@ -1,0 +1,3 @@
+<apex:page >
+  <h1>Your request to print the table tent(s) has been received.</h1>
+</apex:page>

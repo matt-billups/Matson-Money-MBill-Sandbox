@@ -1,0 +1,30 @@
+36.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+13:00:49.0 (420705)|USER_INFO|[EXTERNAL]|00518000002hPQO|matthew.billups@matsonmoney.com.mbill|Mountain Standard Time|GMT-07:00
+13:00:49.0 (455168)|EXECUTION_STARTED
+13:00:49.0 (460399)|CODE_UNIT_STARTED|[EXTERNAL]|066180000001Aq4|VF: /apex/DeepCloneMatsonEventFlowRedirect
+13:00:49.7 (7925622)|FLOW_CREATE_INTERVIEW_BEGIN||30036000000U6ba|301180000002xBg
+13:00:49.7 (7999814)|FLOW_CREATE_INTERVIEW_END|93341da459da6c85be2c4c9970be166120ab65f-45f4|Deep Clone Matson Event
+13:00:49.8 (8104021)|FLOW_START_INTERVIEW_BEGIN|93341da459da6c85be2c4c9970be166120ab65f-45f4|Deep Clone Matson Event
+13:00:49.8 (123935388)|FLOW_ELEMENT_ERROR|The flow couldn't find the EventRecordTypeObject resource.|FlowDecision|Primary_or_Secondary_Record_Type
+13:00:49.8 (123998852)|FLOW_START_INTERVIEW_END|93341da459da6c85be2c4c9970be166120ab65f-45f4|Deep Clone Matson Event
+13:00:49.0 (132204368)|VF_SERIALIZE_VIEWSTATE_BEGIN|066180000001Aq4
+13:00:49.0 (137748424)|VF_SERIALIZE_VIEWSTATE_END
+13:00:49.140 (140554338)|CUMULATIVE_LIMIT_USAGE
+13:00:49.140 (140554338)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:00:49.140 (140554338)|CUMULATIVE_LIMIT_USAGE_END
+
+13:00:49.0 (140599916)|CODE_UNIT_FINISHED|VF: /apex/DeepCloneMatsonEventFlowRedirect
+13:00:49.0 (141540269)|EXECUTION_FINISHED
